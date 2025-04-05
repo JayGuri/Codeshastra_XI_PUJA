@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { Send, Calendar, MapPin, MessageSquare, IndianRupee, Heart, Compass } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function ChatBot() {
   const [formMode, setFormMode] = useState(true)
@@ -175,11 +176,14 @@ export default function ChatBot() {
   ]
 
   return (
-    <div
+    <motion.div
       ref={chatbotRef}
-      className={`flex flex-col h-[500px] w-full max-w-md bg-black/40 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden border border-white/20 transition-all duration-500 ${
-        !formMode ? "fixed right-0 top-40 z-50 rounded-r-none" : ""
+      className={`flex flex-col bg-black/40 backdrop-blur-lg shadow-xl overflow-hidden border border-white/20 transition-all duration-500 ${
+        formMode ? 'w-full max-w-md h-[500px] rounded-xl' : 'w-[40vw] h-screen fixed right-0 top-0 z-50 rounded-l-xl'
       }`}
+      initial={formMode ? { opacity: 1 } : { x: "100%" }}
+      animate={formMode ? { opacity: 1 } : { x: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
       {/* Chat header */}
       <div className="bg-black/80 text-white px-5 py-3 flex items-center justify-between border-b border-white/10">
@@ -492,6 +496,6 @@ export default function ChatBot() {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   )
 }
