@@ -20,8 +20,8 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full h-full z-0">{isClient && <CesiumGlobe />}</div>
 
       {/* Chatbot overlay - positioned in center */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none p-4">
-        <div className="w-full max-w-md pointer-events-auto">
+      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+        <div className="pointer-events-auto w-full max-w-md">
           <ChatBot />
         </div>
       </div>
