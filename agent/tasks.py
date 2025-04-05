@@ -63,6 +63,35 @@ def lodging_task(context ,agent, people  ):
         agent=agent,
     )
 
+def budget_task(context , agent , luxury,budget ):
+    return Task(
+        description=f"""
+        TRIP DETAILS:
+                        •⁠  ⁠Destination: (if provided, otherwise general allocation)
+                        •⁠  ⁠Trip Duration: Number of days
+                        •⁠  ⁠Number of Travelers: Number of people
+                        •⁠  ⁠Total Budget: {budget} Budget
+                        •⁠  ⁠Luxury Level:{luxury} (budget, mediocre, or luxury)
+                        •⁠  ⁠Relationship Type: (friends, family, or couple)
+
+                        Based on these details, create a budget allocation across the following categories:
+                        1.⁠ ⁠Lodging
+                        2.⁠ ⁠Transportation (includes local transport and any travel between cities)
+                        3.⁠ ⁠Food and Dining
+                        4.⁠ ⁠Activities and Attractions
+                        5.⁠ ⁠Miscellaneous (shopping, souvenirs, contingency)
+
+                        For each category, provide:
+                        •⁠  ⁠The absolute amount in INR allocated
+                        •⁠  ⁠The percentage of the total budget
+                        •⁠  ⁠A brief justification for this allocation
+                        •⁠  ⁠Any money-saving tips for this category
+        """,
+        context=context,
+        expected_output="A detailed  report with relevant travel and budget related data.",
+        agent=agent,
+    )
+
 def planner_task(context, agent ):
     return Task(
         description=f"""

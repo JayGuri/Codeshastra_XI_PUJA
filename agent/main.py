@@ -1,5 +1,5 @@
-from agents import season_agent , location_agent , lodging_agent , persona_agent , planner_agent
-from tasks import location_task, weather_task , lodging_task , persona_task , planner_task
+from agents import season_agent , location_agent , lodging_agent , persona_agent , planner_agent , budget_agent
+from tasks import location_task, weather_task , lodging_task , persona_task , planner_task,budget_task
 from crewai import Crew, Process
 import streamlit as st
 
@@ -21,6 +21,8 @@ date_to = st.date_input("📅 Return Date")
 people = st.text_input("Number of people ")
 relationship = st.text_input("Couple , solo , Family , Friends")
 interests = st.text_area("🎯 Your Interests (e.g., sightseeing, food, adventure)", "sightseeing and good food")
+luxury = st.text_area("budget, mediocre, or luxury")
+budget = st.text_area("Budget In Dollars")
 
 # Button to run CrewAI
 if st.button("🚀 Generate Travel Plan"):
@@ -33,14 +35,15 @@ if st.button("🚀 Generate Travel Plan"):
         loc_task = location_task(location_agent, from_city, destination_city, date_from, date_to)
         weather_task = weather_task(season_agent, destination_city , date_from, date_to)
         persona_task = persona_task(persona_agent,people,relationship)
-        lodging_task = lodging_task([loc_task,persona_task] ,lodging_agent,people)
+        budget_task = budget_task([loc_task,persona_task],budget_agent,budget,luxury)
+        lodging_task = lodging_task([loc_task,persona_task,budget_task] ,lodging_agent,people)
         planner_task = planner_task([loc_task, weather_task,lodging_task,persona_task], planner_agent)
 
 
         # Define Crew
         crew = Crew(
-            agents=[location_agent, season_agent ,persona_agent, lodging_agent   , planner_agent],
-            tasks=[loc_task, weather_task ,persona_task ,lodging_task, planner_task ],
+            agents=[location_agent, season_agent ,persona_agent,budget_agent, lodging_agent   , planner_agent],
+            tasks=[loc_task, weather_task ,persona_task,budget_task ,lodging_task, planner_task ],
             process=Process.sequential,
             full_output=True,
             verbose=True,

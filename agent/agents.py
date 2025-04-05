@@ -27,7 +27,7 @@ season_agent = Agent(
 location_agent = Agent(
     name="Location Search",
     role="Provide the best attractions in the city mentioned",
-    goal="Provides information on things to do in the city based on user interests.",
+    goal="Provides information on things to do in the city based on user interests. Also provide entry charges(if major attraction) , average charges , offers along with each location",
     backstory ="A local that knows about all the attractions in their city",
     tools=[scrape_web_tool],
     verbose =True,
@@ -76,8 +76,9 @@ transport_agent = Agent(
 
 budget_agent = Agent(
     name="Budget Strategist",
-    role="Splits overall trip budget into lodging, transport, food, and activities",
-    goal="Distribute the user's budget wisely according to the luxury level and number of people.",
+    role="""You are a travel budget expert who specializes in optimally allocating travel budgets across different expense categories.
+            Your task is to create a budget allocation plan for a trip to help travelers manage their finances effectively.Consider the luxury level, relationship type, and trip duration in your allocation. A "luxury" trip would allocate more to premium accommodations and dining, while a "budget" trip would prioritize cost-effective options.""",
+    goal="""Distribute the user's budget wisely according to the luxury level and number of people and trip details""",
     backstory="You're a financial planner for travel who optimizes budgets for fun and comfort.",
     verbose=True,
     async_execution=False,
