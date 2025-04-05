@@ -12,85 +12,102 @@ from crewai import LLM
 #class Attractions(BaseModel):
  #   attractions: dict
 
+
+gemini_flash = LLM(
+    model="gemini/gemini-2.0-flash",
+    temperature=0.3,  
+    max_tokens=2000,
+    top_p=0.95, 
+    frequency_penalty=0.25
+)
+
 season_agent = Agent(
-    name="Season Analyser",
-    role="Provide information about the weather of the city in the month that is given",
-    goal="Provides information on weather of the city based on season.",
-    backstory ="A local that knows about the weather",
+    name="Season Analyst",
+    role="Analyze historical weather patterns and seasonal trends",
+    goal="Provide accurate weather expectations and packing recommendations",
+    backstory="A meteorology expert with decade of travel industry experience",
     tools=[scrape_web_tool],
-    verbose =True,
-    max_iter=5,
-    llm = LLM(model="gemini/gemini-2.0-flash"),
-    allow_delegation = False,
+    verbose=True,
+    max_iter=7,  # Increased for complex weather analysis
+    llm=gemini_flash,
+    async_execution=True,  # Enable parallel processing
+    memory=True  # Remember previous analyses
 )
 
 location_agent = Agent(
-    name="Location Search",
-    role="Provide the best attractions in the city mentioned",
-    goal="Provides information on things to do in the city based on user interests.",
-    backstory ="A local that knows about all the attractions in their city",
+    name="Attractions Curator",
+    role="Identify trending and niche local experiences",
+    goal="Curate personalized attraction lists with crowd predictions",
+    backstory="A cultural anthropologist turned travel influencer",
     tools=[scrape_web_tool],
-    verbose =True,
-    max_iter=5,
-    llm = LLM(model="gemini/gemini-2.0-flash"),
-    allow_delegation = False,
+    verbose=True,
+    max_iter=8,  # More iterations for comprehensive research
+    llm=gemini_flash,
+    async_execution=True,
+    allow_delegation=False,
+    memory=True
 )
 
 persona_agent = Agent(
-    name="Persona Agent",
-    role="Analyzes the relationship type to tweak suggestions",
-    goal="Tailor the experience based on whether the trip is with friends, family, partner, or solo.",
-    backstory ="You're a psychologist-turned-travel-consultant who crafts journeys that suit people's vibes perfectly.",
-    verbose =True,
-    max_iter=5,
-    llm = LLM(model="gemini/gemini-2.0-flash"),
-    allow_delegation = False,
+    name="Travel Psychologist",
+    role="Analyze group dynamics and personal preferences",
+    goal="Optimize trip structure for relationship dynamics",
+    backstory="Behavioral scientist specializing in group travel dynamics",
+    verbose=True,
+    llm=gemini_flash.clone(temperature=0.7),  # More creative suggestions
+    max_rpm=15,  # Rate limiting for API safety
+    memory=True,
+    step_callback=lambda x: print(f"Analyzing group dynamics: {x}")
 )
 
 lodging_agent = Agent(
-        name="Lodging Expert",
-        role="Hotel and Lodging Recommender",
-        goal="Find the best lodging options based on the user's budget, luxury level, and preferences.",
-        backstory="You're a travel industry expert with years of experience recommending accommodations across the globe.",
-        tools=[scrape_web_tool],
-        verbose=True,
-        async_execution=False,
-        function_calling_llm="gemini/gemini-2.0-flash"
-    )
-
-#transportation agent 
-transport_agent = Agent(
-    role="Transport Recommender",
-    goal="Select the best transportation options based on budget, destination, travel group, and duration",
-    backstory=(
-        "You are an expert in transportation logistics, able to recommend suitable travel methods "
-        "based on factors like group size, comfort, and cost. You also consider the season and luxury level "
-        "when selecting the best option."
-    ),
-    verbose=True,
-    allow_delegation=False,
+    name="Accommodation Specialist",
+    role="Match lodging options to budget and preferences",
+    goal="Find perfect accommodations balancing cost/quality",
+    backstory="Former luxury hotel concierge with global network",
     tools=[scrape_web_tool],
-    async_execution=False,
-    function_calling_llm= "gemini/gemini-2.0-flash"
+    verbose=True,
+    llm=gemini_flash,
+    async_execution=True,
+    max_retries=3,  # Handle flaky web sources
+    cache=True  # Remember good options
+)
+
+transport_agent = Agent(
+    name="Transportation Logistician",
+    role="Optimize transportation between locations",
+    goal="Create efficient travel routes with cost/time balance",
+    backstory="Urban planner specializing in transit systems",
+    tools=[scrape_web_tool],
+    verbose=True,
+    llm=gemini_flash,
+    max_iter=6,
+    allow_delegation=True,  # Can ask location agent for details
+    memory=True
 )
 
 budget_agent = Agent(
-    name="Budget Strategist",
-    role="Splits overall trip budget into lodging, transport, food, and activities",
-    goal="Distribute the user's budget wisely according to the luxury level and number of people.",
-    backstory="You're a financial planner for travel who optimizes budgets for fun and comfort.",
+    name="Financial Allocator",
+    role="Distribute funds across trip components",
+    goal="Create balanced budget respecting priorities",
+    backstory="CPA with travel industry specialization",
     verbose=True,
-    async_execution=False,
-    function_calling_llm="gemini/gemini-2.0-flash"
+    llm=gemini_flash.clone(temperature=0.1),  # More precise calculations
+    step_callback=lambda x: print(f"Budget update: {x}"),
+    max_iter=5,
+    memory=True
 )
 
 planner_agent = Agent(
-    role="Travel Planning Expert",
-    goal="Compiles all gathered information to create a travel plan.",
-    backstory="An expert in planning seamless travel itineraries.",
+    name="Master Orchestrator",
+    role="Synthesize all inputs into cohesive plan",
+    goal="Produce detailed, executable travel itinerary",
+    backstory="Professional travel planner with 1000+ successful trips",
     tools=[scrape_web_tool],
     verbose=True,
-    max_iter=5,
-    llm = LLM(model="gemini/gemini-2.0-flash"),
-    allow_delegation=False,
+    llm=gemini_flash,
+    max_iter=9,  # Most complex task
+    allow_delegation=True,
+    memory=True,
+    step_callback=lambda x: print(f"Plan progress: {x}")
 )
