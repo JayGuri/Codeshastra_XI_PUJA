@@ -1,16 +1,10 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { Send, Calendar, Users, Plane, MapPin } from "lucide-react"
+import { Send, Calendar, Users, Plane, MapPin, MessageSquare } from "lucide-react"
 
 export default function ChatBot() {
-  const [messages, setMessages] = useState([
-    {
-      type: "bot",
-      content:
-        "Hi there! I'm your travel assistant. Tell me your destination, number of people, days, and budget to get started.",
-    },
-  ])
+  const [messages, setMessages] = useState([])
   const [inputValue, setInputValue] = useState("")
   const [showDateModal, setShowDateModal] = useState(false)
   const [showTravelTypeModal, setShowTravelTypeModal] = useState(false)
@@ -19,6 +13,8 @@ export default function ChatBot() {
   const [endDate, setEndDate] = useState("")
   const [travelType, setTravelType] = useState("solo")
   const [transportMode, setTransportMode] = useState("plane")
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [initialPromptSubmitted, setInitialPromptSubmitted] = useState(false)
 
   const messagesEndRef = useRef(null)
 
@@ -36,6 +32,12 @@ export default function ChatBot() {
 
     // Add user message
     setMessages([...messages, { type: "user", content: inputValue }])
+    setIsExpanded(true)
+
+    // Set initial prompt as submitted to show quick action buttons
+    if (!initialPromptSubmitted) {
+      setInitialPromptSubmitted(true)
+    }
 
     // Process the message (in a real app, this would involve NLP)
     setTimeout(() => {
@@ -44,7 +46,7 @@ export default function ChatBot() {
         ...prev,
         {
           type: "bot",
-          content: `Thanks for sharing! I'll create a travel plan for "${inputValue}". Would you like to add more details using the buttons below?`,
+          content: `Thanks! I'll create a travel plan for "${inputValue}". Use the buttons below for more details.`,
         },
       ])
     }, 1000)
@@ -58,7 +60,7 @@ export default function ChatBot() {
       ...prev,
       {
         type: "bot",
-        content: `Great! I've noted your travel dates: ${startDate} to ${endDate}.`,
+        content: `Travel dates: ${startDate} to ${endDate}`,
       },
     ])
   }
@@ -69,7 +71,7 @@ export default function ChatBot() {
       ...prev,
       {
         type: "bot",
-        content: `Perfect! I've updated your travel type to: ${travelType}.`,
+        content: `Travel type: ${travelType}`,
       },
     ])
   }
@@ -80,116 +82,140 @@ export default function ChatBot() {
       ...prev,
       {
         type: "bot",
-        content: `Got it! Your preferred mode of transport is: ${transportMode}.`,
+        content: `Transport: ${transportMode}`,
       },
     ])
   }
 
   return (
-    <div className="flex flex-col h-[20%] w-full bg-gray-150 backdrop-blur-md rounded-xl shadow-2xl overflow-hidden border border-white/20">
+    <div
+      className={`flex flex-col ${
+        initialPromptSubmitted ? "h-[400px]" : isExpanded || messages.length > 0 ? "h-[280px]" : "h-auto"
+      } w-full max-w-md bg-black/40 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden border border-white/20 transition-all duration-500`}
+    >
       {/* Chat header */}
-      <div className="bg-gray-400 text-white px-4 py-3 flex items-center">
-        <MapPin className="w-5 h-5 mr-2" />
-        <h3 className="font-medium">Travel Assistant</h3>
+      <div className="bg-black/80 text-white px-5 py-3 flex items-center justify-between border-b border-white/10">
+        <div className="flex items-center">
+          <MapPin className="w-5 h-5 mr-2 text-white/80" />
+          <h3 className="font-medium text-base">Travel Assistant</h3>
+        </div>
+        {messages.length === 0 && (
+          <div className="text-xs text-white/60 flex items-center">
+            <MessageSquare className="w-3 h-3 mr-1" />
+            Tell me about your trip
+          </div>
+        )}
       </div>
 
       {/* Chat messages */}
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50/50">
-        {messages.map((message, index) => (
-          <div key={index} className={`mb-4 ${message.type === "user" ? "text-right" : "text-left"}`}>
-            <div
-              className={`inline-block px-4 py-2 text-sm rounded-lg max-w-[85%] ${
-                message.type === "user"
-                  ? "bg-indigo-600 text-white rounded-tr-none"
-                  : "bg-white text-gray-800 rounded-tl-none shadow-sm"
-              }`}
-            >
-              {message.content}
+      {messages.length > 0 && (
+        <div className="flex-1 p-4 overflow-y-auto bg-transparent">
+          {messages.map((message, index) => (
+            <div key={index} className={`mb-4 ${message.type === "user" ? "text-right" : "text-left"}`}>
+              <div
+                className={`inline-block px-4 py-2.5 rounded-lg max-w-[85%] text-base ${
+                  message.type === "user"
+                    ? "bg-black/70 text-white rounded-tr-none shadow-md"
+                    : "bg-white/70 text-gray-800 rounded-tl-none shadow-md backdrop-blur-sm"
+                }`}
+              >
+                {message.content}
+              </div>
             </div>
-          </div>
-        ))}
-        <div ref={messagesEndRef} />
-      </div>
-
-      {/* Quick action buttons */}
-      <div className="px-4 py-2 border-t border-gray-200 flex space-x-2 overflow-x-auto bg-white/70">
-        <button
-          onClick={() => setShowDateModal(true)}
-          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap hover:bg-indigo-200 transition-colors"
-        >
-          <Calendar className="w-4 h-4 mr-1" />
-          Travel Dates
-        </button>
-        <button
-          onClick={() => setShowTravelTypeModal(true)}
-          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap hover:bg-indigo-200 transition-colors"
-        >
-          <Users className="w-4 h-4 mr-1" />
-          Travel Type
-        </button>
-        <button
-          onClick={() => setShowTransportModal(true)}
-          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap hover:bg-indigo-200 transition-colors"
-        >
-          <Plane className="w-4 h-4 mr-1" />
-          Transport
-        </button>
-      </div>
+          ))}
+          <div ref={messagesEndRef} />
+        </div>
+      )}
 
       {/* Input area */}
-      <form onSubmit={handleSendMessage} className="p-3 border-t border-gray-200 flex bg-white/70">
+      <form onSubmit={handleSendMessage} className="p-3 border-t border-white/10 flex bg-black/30 backdrop-blur-md">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Enter destination, people, days, and budget..."
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white/80"
+          placeholder="Enter destination, people, days, budget..."
+          className="flex-1 px-4 py-2.5 text-base border border-gray-500/40 rounded-l-md focus:outline-none focus:ring-1 focus:ring-white/50 bg-black/30 text-white placeholder-gray-300"
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 transition-colors flex items-center justify-center"
+          className="px-4 py-2.5 bg-black/70 text-white rounded-r-md hover:bg-black/90 transition-colors flex items-center justify-center"
         >
           <Send className="w-5 h-5" />
         </button>
       </form>
 
+      {/* Quick action buttons - only show after initial prompt */}
+      {initialPromptSubmitted && (
+        <div className="px-3 py-2.5 border-t border-white/10 flex space-x-3 overflow-x-auto bg-black/30 backdrop-blur-md">
+          {/* Animated buttons */}
+          <button
+            onClick={() => setShowDateModal(true)}
+            className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm animate-fadeInUp"
+            style={{ animationDelay: "0ms" }}
+          >
+            <Calendar className="w-4 h-4 mr-1.5" />
+            Dates
+          </button>
+          <button
+            onClick={() => setShowTravelTypeModal(true)}
+            className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm animate-fadeInUp"
+            style={{ animationDelay: "150ms" }}
+          >
+            <Users className="w-4 h-4 mr-1.5" />
+            Type
+          </button>
+          <button
+            onClick={() => setShowTransportModal(true)}
+            className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm animate-fadeInUp"
+            style={{ animationDelay: "300ms" }}
+          >
+            <Plane className="w-4 h-4 mr-1.5" />
+            Transport
+          </button>
+        </div>
+      )}
+
       {/* Date Modal */}
       {showDateModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg w-full max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Select Travel Dates</h3>
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+          <div className="bg-black/80 backdrop-blur-lg p-5 rounded-xl w-full max-w-xs border border-white/20 text-white shadow-2xl">
+            <h3 className="text-base font-semibold mb-4">Select Travel Dates</h3>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
-                <input
-                  type="date"
-                  value={startDate}
-                  onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                  required
-                />
+                <label className="block text-sm font-medium text-gray-200 mb-1.5">Start Date</label>
+                <div className="date-input-container">
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                    className="w-full px-3 py-2 text-sm border border-gray-600 rounded-md bg-black/40 text-white calendar-white"
+                    required
+                  />
+                </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">End Date</label>
-                <input
-                  type="date"
-                  value={endDate}
-                  onChange={(e) => setEndDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
-                  required
-                />
+                <label className="block text-sm font-medium text-gray-200 mb-1.5">End Date</label>
+                <div className="date-input-container">
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    className="w-full px-3 py-2 text-sm border border-gray-600 rounded-md bg-black/40 text-white calendar-white"
+                    required
+                  />
+                </div>
               </div>
             </div>
-            <div className="mt-6 flex justify-end space-x-3">
+            <div className="mt-5 flex justify-end space-x-3">
               <button
                 onClick={() => setShowDateModal(false)}
-                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                className="px-4 py-2 text-sm border border-gray-600 rounded-md text-gray-300 hover:bg-white/10"
               >
                 Cancel
               </button>
               <button
                 onClick={handleDateSelection}
-                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                className="px-4 py-2 text-sm bg-white/15 text-white rounded-md hover:bg-white/25 shadow-sm"
                 disabled={!startDate || !endDate}
               >
                 Confirm
@@ -201,12 +227,12 @@ export default function ChatBot() {
 
       {/* Travel Type Modal */}
       {showTravelTypeModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg w-full max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Select Travel Type</h3>
-            <div className="space-y-2">
-              {["solo", "couple", "family", "group"].map((type) => (
-                <div key={type} className="flex items-center">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+          <div className="bg-black/80 backdrop-blur-lg p-5 rounded-xl w-full max-w-xs border border-white/20 text-white shadow-2xl">
+            <h3 className="text-base font-semibold mb-4">Select Travel Type</h3>
+            <div className="space-y-3">
+              {["solo", "couple", "family"].map((type) => (
+                <div key={type} className="flex items-center p-1.5">
                   <input
                     type="radio"
                     id={type}
@@ -214,24 +240,38 @@ export default function ChatBot() {
                     value={type}
                     checked={travelType === type}
                     onChange={() => setTravelType(type)}
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+                    className="h-4 w-4 text-white focus:ring-white/50"
                   />
-                  <label htmlFor={type} className="ml-2 block text-sm text-gray-700 capitalize">
+                  <label htmlFor={type} className="ml-2.5 block text-sm text-gray-200 capitalize">
                     {type}
                   </label>
                 </div>
               ))}
+              <div className="flex items-center p-1.5">
+                <input
+                  type="radio"
+                  id="group"
+                  name="travelType"
+                  value="group"
+                  checked={travelType === "group"}
+                  onChange={() => setTravelType("group")}
+                  className="h-4 w-4 text-white focus:ring-white/50"
+                />
+                <label htmlFor="group" className="ml-2.5 block text-sm text-gray-200 capitalize">
+                  Group (&gt;10)
+                </label>
+              </div>
             </div>
-            <div className="mt-6 flex justify-end space-x-3">
+            <div className="mt-5 flex justify-end space-x-3">
               <button
                 onClick={() => setShowTravelTypeModal(false)}
-                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                className="px-4 py-2 text-sm border border-gray-600 rounded-md text-gray-300 hover:bg-white/10"
               >
                 Cancel
               </button>
               <button
                 onClick={handleTravelTypeSelection}
-                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                className="px-4 py-2 text-sm bg-white/15 text-white rounded-md hover:bg-white/25 shadow-sm"
               >
                 Confirm
               </button>
@@ -242,12 +282,12 @@ export default function ChatBot() {
 
       {/* Transport Modal */}
       {showTransportModal && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg w-full max-w-md">
-            <h3 className="text-lg font-semibold mb-4">Select Transport Mode</h3>
-            <div className="space-y-2">
-              {["plane", "train", "car", "bus", "cruise"].map((mode) => (
-                <div key={mode} className="flex items-center">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+          <div className="bg-black/80 backdrop-blur-lg p-5 rounded-xl w-full max-w-xs border border-white/20 text-white shadow-2xl">
+            <h3 className="text-base font-semibold mb-4">Select Transport Mode</h3>
+            <div className="space-y-3">
+              {["plane", "train", "car", "bus"].map((mode) => (
+                <div key={mode} className="flex items-center p-1.5">
                   <input
                     type="radio"
                     id={mode}
@@ -255,24 +295,24 @@ export default function ChatBot() {
                     value={mode}
                     checked={transportMode === mode}
                     onChange={() => setTransportMode(mode)}
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+                    className="h-4 w-4 text-white focus:ring-white/50"
                   />
-                  <label htmlFor={mode} className="ml-2 block text-sm text-gray-700 capitalize">
+                  <label htmlFor={mode} className="ml-2.5 block text-sm text-gray-200 capitalize">
                     {mode}
                   </label>
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex justify-end space-x-3">
+            <div className="mt-5 flex justify-end space-x-3">
               <button
                 onClick={() => setShowTransportModal(false)}
-                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                className="px-4 py-2 text-sm border border-gray-600 rounded-md text-gray-300 hover:bg-white/10"
               >
                 Cancel
               </button>
               <button
                 onClick={handleTransportSelection}
-                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                className="px-4 py-2 text-sm bg-white/15 text-white rounded-md hover:bg-white/25 shadow-sm"
               >
                 Confirm
               </button>

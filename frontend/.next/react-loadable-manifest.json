@@ -1,8 +1,1 @@
-{
-  "app/page.jsx -> @/components/CesiumGlobe": {
-    "id": "app/page.jsx -> @/components/CesiumGlobe",
-    "files": [
-      "static/chunks/_app-pages-browser_components_CesiumGlobe_jsx.js"
-    ]
-  }
-}
+{}

@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app/page.jsx -> @/components/CesiumGlobe\":{\"id\":\"app/page.jsx -> @/components/CesiumGlobe\",\"files\":[\"static/chunks/_app-pages-browser_components_CesiumGlobe_jsx.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"
