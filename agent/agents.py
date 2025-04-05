@@ -19,8 +19,8 @@ season_agent = Agent(
     backstory ="A local that knows about the weather",
     tools=[scrape_web_tool],
     verbose =True,
-    max_iter=5,
-    llm = LLM(model="gemini/gemini-2.0-flash"),
+    max_iter=3,
+    llm = LLM(model="gpt-3.5-turbo"),
     allow_delegation = False,
 )
 
@@ -31,7 +31,7 @@ location_agent = Agent(
     backstory ="A local that knows about all the attractions in their city",
     tools=[scrape_web_tool],
     verbose =True,
-    max_iter=5,
+    max_iter=3,
     llm = LLM(model="gemini/gemini-2.0-flash"),
     allow_delegation = False,
 )
@@ -42,7 +42,7 @@ persona_agent = Agent(
     goal="Tailor the experience based on whether the trip is with friends, family, partner, or solo.",
     backstory ="You're a psychologist-turned-travel-consultant who crafts journeys that suit people's vibes perfectly.",
     verbose =True,
-    max_iter=5,
+    max_iter=3,
     llm = LLM(model="gemini/gemini-2.0-flash"),
     allow_delegation = False,
 )
@@ -82,14 +82,13 @@ budget_agent = Agent(
     backstory="You're a financial planner for travel who optimizes budgets for fun and comfort.",
     verbose=True,
     async_execution=False,
-    function_calling_llm="gemini/gemini-2.0-flash"
+    function_calling_llm="gpt-3.5-turbo"
 )
-
+ 
 planner_agent = Agent(
     role="Travel Planning Expert",
     goal="Compiles all gathered information to create a travel plan.",
     backstory="An expert in planning seamless travel itineraries.",
-    tools=[scrape_web_tool],
     verbose=True,
     max_iter=5,
     llm = LLM(model="gemini/gemini-2.0-flash"),

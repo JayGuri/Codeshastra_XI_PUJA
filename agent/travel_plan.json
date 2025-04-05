@@ -1,0 +1,171 @@
+{
+  "tripName": "Dubai Friends Trip",
+  "dates": "November 12-17, 2025",
+  "groupSize": 5,
+  "visaRequirements": {
+    "nationality": "Indian",
+    "details": "Indian citizens may be eligible for visa on arrival if they hold a valid US visa, US green card, or UK residence visa. Otherwise, a tourist visa is required.",
+    "touristVisaDetails": {
+      "type": "30-day (single or multiple entry)",
+      "validity": "1 month",
+      "requirements": [
+        "Valid Indian passport (minimum 6 months validity)",
+        "Passport-sized photographs",
+        "Confirmed return flight ticket",
+        "Duly filled visa application form",
+        "Travel insurance (recommended)"
+      ],
+      "applicationProcess": "Apply online 2-3 weeks before travel.",
+      "cost": "Approximately USD 63 (around Dh232) per person.",
+      "recommendation": "Start the visa application process ASAP and ensure all documents are accurate and up-to-date."
+    }
+  },
+  "accommodation": {
+    "options": [
+      {
+        "type": "Apartment Hotels",
+        "examples": [
+          "The Residences at Burj Khalifa (High-end)",
+          "DAMAC Maison Canal Views (Mid-range)",
+          "Adagio Premium Dubai Al Barsha (Budget-friendly)"
+        ],
+        "description": "Offer space and privacy, ideal for socializing.",
+        "costEstimate": "AED 800 - AED 2500 (USD 218 - USD 681) per night for the group"
+      },
+      {
+        "type": "Connecting Hotel Rooms",
+        "description": "Offer proximity while maintaining privacy.",
+        "costEstimate": "AED 1000 - AED 3000 (USD 272 - USD 817) per night for the group"
+      },
+      {
+        "type": "Hostels",
+        "description": "Budget-friendly, with private rooms available for several occupants.",
+        "costEstimate": "AED 300 - AED 600 (USD 82 - USD 163) per night for the group"
+      }
+    ],
+    "recommendation": "Apartment hotels are optimal for balance between space, privacy, and cost; book in advance."
+  },
+  "dailyItinerary": [
+    {
+      "day": "November 12, 2025 (Arrival)",
+      "schedule": [
+        {"time": "Morning", "activity": "Arrive at Dubai International Airport (DXB), transfer to accommodation", "location": "Dubai International Airport, Accommodation", "spending": "Transportation: AED 100"},
+        {"time": "Afternoon", "activity": "Check-in, relax, and settle in", "location": "Accommodation", "spending": "0"},
+        {"time": "Evening", "activity": "Dinner at a local restaurant", "location": "Local Restaurant", "spending": "AED 300"}
+      ],
+      "travelPlan": "Airport to hotel by taxi or metro.",
+      "expenses": "Estimated AED 400 (transport + dinner)"
+    },
+    {
+      "day": "November 13, 2025",
+      "schedule": [
+        {"time": "Morning", "activity": "Visit Burj Khalifa", "location": "Burj Khalifa", "spending": "AED 800"},
+        {"time": "Afternoon", "activity": "Dubai Mall & Lunch", "location": "Dubai Mall", "spending": "AED 600"},
+        {"time": "Evening", "activity": "Dubai Fountain Show & Dinner", "location": "Dubai Fountain", "spending": "AED 400"}
+      ],
+      "travelPlan": "Taxi or Metro to Burj Khalifa and Dubai Mall.",
+      "expenses": "Estimated AED 1800 (Burj Khalifa tickets, lunch, dinner, transport)"
+    },
+    {
+      "day": "November 14, 2025",
+      "schedule": [
+        {"time": "Morning", "activity": "Desert Safari", "location": "Dubai Desert", "spending": "AED 1200"},
+        {"time": "Evening", "activity": "Relax at Accommodation", "location": "Accommodation", "spending": "AED 100 (snacks)"}
+      ],
+      "travelPlan": "Desert Safari tour with pick-up and drop-off included.",
+      "expenses": "Estimated AED 1300 (Desert Safari, snacks)"
+    },
+    {
+      "day": "November 15, 2025",
+      "schedule": [
+        {"time": "Morning", "activity": "Water Park (Aquaventure or Wild Wadi)", "location": "Water Park", "spending": "AED 1500"},
+        {"time": "Evening", "activity": "Dinner at Dubai Marina", "location": "Dubai Marina", "spending": "AED 500"}
+      ],
+      "travelPlan": "Taxi to Water Park, Taxi to Dubai Marina.",
+      "expenses": "Estimated AED 2000 (Water Park tickets, dinner, transport)"
+    },
+    {
+      "day": "November 16, 2025",
+      "schedule": [
+        {"time": "Morning", "activity": "Beach Day at Jumeirah Beach", "location": "Jumeirah Beach", "spending": "AED 200 (Beach Club Access, optional)"},
+        {"time": "Afternoon", "activity": "Shopping at Souks", "location": "Souks", "spending": "AED 400 (Souvenirs)"},
+        {"time": "Evening", "activity": "Farewell Dinner", "location": "Restaurant", "spending": "AED 600"}
+      ],
+      "travelPlan": "Taxi to Jumeirah Beach, Taxi to Souks, Taxi to Restaurant",
+      "expenses": "Estimated AED 1200 (Beach Club, Souvenirs, Dinner, transport)"
+    },
+     {
+      "day": "November 17, 2025 (Departure)",
+      "schedule": [
+        {"time": "Morning", "activity": "Check out from accommodation", "location": "Accommodation", "spending": "0"},
+        {"time": "Afternoon", "activity": "Transfer to Dubai International Airport (DXB)", "location": "Dubai International Airport", "spending": "AED 100 (Transportation)"},
+        {"time": "Evening", "activity": "Departure", "location": "Dubai International Airport", "spending": "0"}
+      ],
+      "travelPlan": "Hotel to Airport by taxi or metro",
+      "expenses": "Estimated AED 100 (transport)"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Desert Safari",
+      "cost": "AED 150 - AED 300 (USD 41 - USD 82) per person",
+      "description": "Includes dune bashing, camel riding, BBQ dinner, and cultural performances."
+    },
+    {
+      "name": "Burj Khalifa Visit & Dubai Fountain Show",
+      "cost": "Burj Khalifa tickets: AED 150 - AED 400 (USD 41 - USD 109), Fountain show: Free",
+      "description": "Iconic view from the top and free fountain show."
+    },
+    {
+      "name": "Dubai Marina Dhow Cruise",
+      "cost": "AED 100 - AED 250 (USD 27 - USD 68) per person",
+      "description": "Evening cruise with dinner."
+    },
+    {
+      "name": "Water Parks",
+      "cost": "AED 250 - AED 350 (USD 68 - USD 95) per person",
+      "description": "World-class parks like Aquaventure."
+    },
+    {
+      "name": "Beach Day",
+      "cost": "Free (public beaches) to AED 150 - AED 300 (USD 41 - USD 82) for beach club access",
+      "description": "Relax at Jumeirah Beach or Kite Beach; public beaches are free."
+    }
+  ],
+  "estimatedCostOfLiving": {
+    "accommodation": "AED 4000 - AED 12500 (USD 1090 - USD 3405)",
+    "food": "AED 2500 - AED 5000 (USD 681 - USD 1362)",
+    "activitiesAndEntranceFees": "AED 2000 - AED 4000 (USD 545 - USD 1090)",
+    "transportation": "AED 500 - AED 1000 (USD 136 - USD 272)",
+    "shoppingAndSouvenirs": "AED 500 - AED 2000 (USD 136 - USD 545)",
+    "visaCosts": "AED 1160 (USD 315)",
+    "totalEstimatedCost": "AED 9660 - AED 24660 (USD 2638 - USD 6719) or AED 1932 - AED 4932 (USD 527 - USD 1344) per person."
+  },
+  "budgetingTips": [
+    "Cook some meals in your apartment.",
+    "Use free attractions.",
+    "Set daily limits on spending."
+  ],
+  "weather": {
+    "averageDaytimeTemperature": "30.7°C/87°F",
+    "temperatureRange": "Highs of 38°C/100°F at the beginning of the month, gradually decreasing to the high 20s/low 80s F by month-end.",
+    "patterns": "Expect mostly sunny days."
+  },
+  "packingEssentials": [
+    "Lightweight clothing",
+    "Swimwear",
+    "Sunscreen",
+    "Sunglasses",
+    "Hat",
+    "Comfortable walking shoes",
+    "Light jacket or sweater for the evenings",
+    "Modest clothing for visiting religious sites"
+  ],
+  "importantNotes": [
+    "Communication is Key: Discuss everyone's expectations.",
+    "Respect Budgets: Be mindful of spending habits.",
+    "Designate Responsibilities: Share planning tasks among the group.",
+    "Flexibility: Adapt plans as needed.",
+    "Most Importantly: Have Fun! Enjoy the diverse offerings of Dubai!"
+  ]
+}

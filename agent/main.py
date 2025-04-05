@@ -3,7 +3,6 @@ from tasks import location_task, weather_task , lodging_task , persona_task , pl
 from crewai import Crew, Process
 import streamlit as st
 
-# Streamlit App Title
 st.title("🌍 AI-Powered Trip Planner")
 
 st.markdown("""
@@ -24,14 +23,12 @@ interests = st.text_area("🎯 Your Interests (e.g., sightseeing, food, adventur
 luxury = st.text_area("budget, mediocre, or luxury")
 budget = st.text_area("Budget In Dollars")
 
-# Button to run CrewAI
 if st.button("🚀 Generate Travel Plan"):
     if not from_city or not destination_city or not date_from or not date_to or not interests:
         st.error("⚠️ Please fill in all fields before generating your travel plan.")
     else:
         st.write("⏳ AI is preparing your personalized travel itinerary... Please wait.")
 
-        # Initialize Tasks
         loc_task = location_task(location_agent, from_city, destination_city, date_from, date_to)
         weather_task = weather_task(season_agent, destination_city , date_from, date_to)
         persona_task = persona_task(persona_agent,people,relationship)
