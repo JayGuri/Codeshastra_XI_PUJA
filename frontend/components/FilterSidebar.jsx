@@ -3,6 +3,8 @@ import { Range } from "react-range";
 
 const PRICE_MIN = 0;
 const PRICE_MAX = 100000;
+const DEFAULT_MIN_PRICE = 0;
+const DEFAULT_MAX_PRICE = 50000;
 
 export default function FilterSidebar({ onFilterChange }) {
   // State for tracking selected filters
@@ -10,8 +12,8 @@ export default function FilterSidebar({ onFilterChange }) {
     transport: [],
     budget: [],
     ageGroup: [],
-    minPrice: 0,
-    maxPrice: 50000,
+    minPrice: DEFAULT_MIN_PRICE,
+    maxPrice: DEFAULT_MAX_PRICE,
   });
 
   // Sample filter options (you can replace these with your actual options)
@@ -26,7 +28,10 @@ export default function FilterSidebar({ onFilterChange }) {
     ],
   };
 
-  const [priceRange, setPriceRange] = useState([PRICE_MIN, PRICE_MAX]);
+  const [priceRange, setPriceRange] = useState([
+    DEFAULT_MIN_PRICE,
+    DEFAULT_MAX_PRICE,
+  ]);
 
   // Handle checkbox changes
   const handleFilterChange = (category, value) => {
@@ -58,8 +63,11 @@ export default function FilterSidebar({ onFilterChange }) {
       transport: [],
       budget: [],
       ageGroup: [],
+      minPrice: DEFAULT_MIN_PRICE,
+      maxPrice: DEFAULT_MAX_PRICE,
     };
     setFilters(emptyFilters);
+    setPriceRange([DEFAULT_MIN_PRICE, DEFAULT_MAX_PRICE]);
     if (onFilterChange) {
       onFilterChange(emptyFilters);
     }
@@ -156,7 +164,7 @@ export default function FilterSidebar({ onFilterChange }) {
       {/* Price Range Filter */}
       <div className="mb-6">
         <h4 className="font-semibold text-white mb-3">Price Range</h4>
-        <div className="px-2">
+        <div className="px-2 py-4">
           <Range
             step={500}
             min={PRICE_MIN}
@@ -171,14 +179,17 @@ export default function FilterSidebar({ onFilterChange }) {
                   height: "6px",
                   width: "100%",
                   backgroundColor: "#ddd",
-                  marginTop: "15px",
+                  borderRadius: "3px",
                 }}
+                className="flex items-center"
               >
                 <div
                   style={{
-                    height: "100%",
+                    position: "absolute",
+                    height: "6px",
                     backgroundColor: "#3b82f6",
-                    marginLeft: `${
+                    borderRadius: "3px",
+                    left: `${
                       ((priceRange[0] - PRICE_MIN) / (PRICE_MAX - PRICE_MIN)) *
                       100
                     }%`,
@@ -197,18 +208,34 @@ export default function FilterSidebar({ onFilterChange }) {
                 {...props}
                 style={{
                   ...props.style,
-                  height: "20px",
-                  width: "20px",
-                  backgroundColor: "#3b82f6",
+                  height: "16px",
+                  width: "16px",
+                  backgroundColor: "#fff",
                   borderRadius: "50%",
+                  border: "2px solid #3b82f6",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
                   outline: "none",
+                  // Center the thumb on the track
+                  marginTop: "-5px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
-              />
+              >
+                <div
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    backgroundColor: "#3b82f6",
+                    borderRadius: "50%",
+                  }}
+                />
+              </div>
             )}
           />
-          <div className="flex justify-between text-sm text-gray-600 mt-2">
-            <span>₹{priceRange[0]}</span>
-            <span>₹{priceRange[1]}</span>
+          <div className="flex justify-between text-sm text-gray-300 mt-3">
+            <span>₹{priceRange[0].toLocaleString()}</span>
+            <span>₹{priceRange[1].toLocaleString()}</span>
           </div>
         </div>
       </div>
