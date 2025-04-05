@@ -86,9 +86,9 @@ export default function ChatBot() {
   }
 
   return (
-    <div className="flex flex-col h-[450px] w-full bg-white/80 backdrop-blur-md rounded-xl shadow-2xl overflow-hidden border border-white/20">
+    <div className="flex flex-col h-[20%] w-full bg-gray-150 backdrop-blur-md rounded-xl shadow-2xl overflow-hidden border border-white/20">
       {/* Chat header */}
-      <div className="bg-indigo-600 text-white px-4 py-3 flex items-center">
+      <div className="bg-gray-400 text-white px-4 py-3 flex items-center">
         <MapPin className="w-5 h-5 mr-2" />
         <h3 className="font-medium">Travel Assistant</h3>
       </div>
@@ -98,7 +98,7 @@ export default function ChatBot() {
         {messages.map((message, index) => (
           <div key={index} className={`mb-4 ${message.type === "user" ? "text-right" : "text-left"}`}>
             <div
-              className={`inline-block px-4 py-2 rounded-lg max-w-[85%] ${
+              className={`inline-block px-4 py-2 text-sm rounded-lg max-w-[85%] ${
                 message.type === "user"
                   ? "bg-indigo-600 text-white rounded-tr-none"
                   : "bg-white text-gray-800 rounded-tl-none shadow-sm"

@@ -286,12 +286,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .right-8 {
-    right: calc(var(--spacing) * 8);
-  }
-  .bottom-8 {
-    bottom: calc(var(--spacing) * 8);
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -412,8 +406,8 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-\[400px\] {
-    height: 400px;
+  .h-\[20\%\] {
+    height: 20%;
   }
   .h-\[450px\] {
     height: 450px;
@@ -590,8 +584,14 @@
       background-color: color-mix(in oklab, var(--color-gray-50) 50%, transparent);
     }
   }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
+  .bg-gray-400 {
+    background-color: var(--color-gray-400);
+  }
+  .bg-gray-600 {
+    background-color: var(--color-gray-600);
   }
   .bg-indigo-100 {
     background-color: var(--color-indigo-100);
@@ -754,10 +754,6 @@
   }
   .shadow-sm {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-xl {
-    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .outline {
