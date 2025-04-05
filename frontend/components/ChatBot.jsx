@@ -1,198 +1,285 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
+import { Send, Calendar, Users, Plane } from "lucide-react"
 
 export default function ChatBot() {
-  const [destination, setDestination] = useState("")
-  const [days, setDays] = useState("")
-  const [budget, setBudget] = useState("")
-  const [people, setPeople] = useState("")
-  const [travelType, setTravelType] = useState("solo")
-  const [travelMode, setTravelMode] = useState("plane")
-  const [travelClass, setTravelClass] = useState("classic")
+  const [messages, setMessages] = useState([
+    {
+      type: "bot",
+      content:
+        "Hi there! I'm your travel assistant. Tell me your destination, number of people, days, and budget to get started.",
+    },
+  ])
+  const [inputValue, setInputValue] = useState("")
+  const [showDateModal, setShowDateModal] = useState(false)
+  const [showTravelTypeModal, setShowTravelTypeModal] = useState(false)
+  const [showTransportModal, setShowTransportModal] = useState(false)
   const [startDate, setStartDate] = useState("")
   const [endDate, setEndDate] = useState("")
+  const [travelType, setTravelType] = useState("solo")
+  const [transportMode, setTransportMode] = useState("plane")
 
-  const handleSubmit = (e) => {
+  const messagesEndRef = useRef(null)
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages])
+
+  const handleSendMessage = (e) => {
     e.preventDefault()
-    // Here you would handle the form submission
-    console.log({
-      destination,
-      days,
-      budget,
-      people,
-      travelType,
-      travelMode,
-      travelClass,
-      startDate,
-      endDate,
-    })
-    // For now, just show an alert
-    alert("Your travel plan is being generated! This feature will be implemented soon.")
+    if (!inputValue.trim()) return
+
+    // Add user message
+    setMessages([...messages, { type: "user", content: inputValue }])
+
+    // Process the message (in a real app, this would involve NLP)
+    setTimeout(() => {
+      // Simulate bot response
+      setMessages((prev) => [
+        ...prev,
+        {
+          type: "bot",
+          content: `Thanks for sharing! I'll create a travel plan for "${inputValue}". Would you like to add more details using the buttons below?`,
+        },
+      ])
+    }, 1000)
+
+    setInputValue("")
+  }
+
+  const handleDateSelection = () => {
+    setShowDateModal(false)
+    setMessages((prev) => [
+      ...prev,
+      {
+        type: "bot",
+        content: `Great! I've noted your travel dates: ${startDate} to ${endDate}.`,
+      },
+    ])
+  }
+
+  const handleTravelTypeSelection = () => {
+    setShowTravelTypeModal(false)
+    setMessages((prev) => [
+      ...prev,
+      {
+        type: "bot",
+        content: `Perfect! I've updated your travel type to: ${travelType}.`,
+      },
+    ])
+  }
+
+  const handleTransportSelection = () => {
+    setShowTransportModal(false)
+    setMessages((prev) => [
+      ...prev,
+      {
+        type: "bot",
+        content: `Got it! Your preferred mode of transport is: ${transportMode}.`,
+      },
+    ])
   }
 
   return (
-    <div className="chatbot-container p-6">
-      <h2 className="text-2xl font-semibold mb-4 text-indigo-900">Plan Your Journey</h2>
+    <div className="flex flex-col h-[400px] bg-white/80 backdrop-blur-md rounded-lg shadow-xl overflow-hidden border border-gray-200">
+      {/* Chat header */}
+      <div className="bg-indigo-600 text-white px-4 py-3">
+        <h3 className="font-medium">Travel Assistant</h3>
+      </div>
 
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="destination" className="block text-sm font-medium text-gray-700 mb-1">
-            Destination
-          </label>
-          <input
-            type="text"
-            id="destination"
-            value={destination}
-            onChange={(e) => setDestination(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            placeholder="Where do you want to go?"
-            required
-          />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-          <div>
-            <label htmlFor="days" className="block text-sm font-medium text-gray-700 mb-1">
-              Number of Days
-            </label>
-            <input
-              type="number"
-              id="days"
-              value={days}
-              onChange={(e) => setDays(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Days"
-              min="1"
-              required
-            />
-          </div>
-
-          <div>
-            <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-1">
-              Budget (USD)
-            </label>
-            <input
-              type="number"
-              id="budget"
-              value={budget}
-              onChange={(e) => setBudget(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Budget"
-              min="1"
-              required
-            />
-          </div>
-
-          <div>
-            <label htmlFor="people" className="block text-sm font-medium text-gray-700 mb-1">
-              Number of People
-            </label>
-            <input
-              type="number"
-              id="people"
-              value={people}
-              onChange={(e) => setPeople(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="People"
-              min="1"
-              required
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <label htmlFor="startDate" className="block text-sm font-medium text-gray-700 mb-1">
-              Start Date
-            </label>
-            <input
-              type="date"
-              id="startDate"
-              value={startDate}
-              onChange={(e) => setStartDate(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              required
-            />
-          </div>
-
-          <div>
-            <label htmlFor="endDate" className="block text-sm font-medium text-gray-700 mb-1">
-              End Date
-            </label>
-            <input
-              type="date"
-              id="endDate"
-              value={endDate}
-              onChange={(e) => setEndDate(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              required
-            />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <div>
-            <label htmlFor="travelType" className="block text-sm font-medium text-gray-700 mb-1">
-              Travel Type
-            </label>
-            <select
-              id="travelType"
-              value={travelType}
-              onChange={(e) => setTravelType(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      {/* Chat messages */}
+      <div className="flex-1 p-4 overflow-y-auto">
+        {messages.map((message, index) => (
+          <div key={index} className={`mb-4 ${message.type === "user" ? "text-right" : "text-left"}`}>
+            <div
+              className={`inline-block px-4 py-2 rounded-lg ${
+                message.type === "user"
+                  ? "bg-indigo-600 text-white rounded-tr-none"
+                  : "bg-gray-200 text-gray-800 rounded-tl-none"
+              }`}
             >
-              <option value="solo">Solo</option>
-              <option value="couple">Couple</option>
-              <option value="family">Family</option>
-              <option value="group">Group (10)</option>
-            </select>
+              {message.content}
+            </div>
           </div>
+        ))}
+        <div ref={messagesEndRef} />
+      </div>
 
-          <div>
-            <label htmlFor="travelMode" className="block text-sm font-medium text-gray-700 mb-1">
-              Travel Mode
-            </label>
-            <select
-              id="travelMode"
-              value={travelMode}
-              onChange={(e) => setTravelMode(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            >
-              <option value="car">Car</option>
-              <option value="train">Train</option>
-              <option value="plane">Plane</option>
-              <option value="bus">Bus</option>
-              <option value="cruise">Cruise</option>
-            </select>
-          </div>
+      {/* Quick action buttons */}
+      <div className="px-4 py-2 border-t border-gray-200 flex space-x-2 overflow-x-auto">
+        <button
+          onClick={() => setShowDateModal(true)}
+          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap"
+        >
+          <Calendar className="w-4 h-4 mr-1" />
+          Travel Dates
+        </button>
+        <button
+          onClick={() => setShowTravelTypeModal(true)}
+          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap"
+        >
+          <Users className="w-4 h-4 mr-1" />
+          Travel Type
+        </button>
+        <button
+          onClick={() => setShowTransportModal(true)}
+          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap"
+        >
+          <Plane className="w-4 h-4 mr-1" />
+          Transport
+        </button>
+      </div>
 
-          <div>
-            <label htmlFor="travelClass" className="block text-sm font-medium text-gray-700 mb-1">
-              Travel Class
-            </label>
-            <select
-              id="travelClass"
-              value={travelClass}
-              onChange={(e) => setTravelClass(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-            >
-              <option value="budget">Budget</option>
-              <option value="classic">Classic</option>
-              <option value="luxury">Luxury</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <button
-            type="submit"
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-md transition-colors duration-300 shadow-md"
-          >
-            Plan My Trip
-          </button>
-        </div>
+      {/* Input area */}
+      <form onSubmit={handleSendMessage} className="p-3 border-t border-gray-200 flex">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Enter destination, people, days, and budget..."
+          className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          type="submit"
+          className="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 transition-colors"
+        >
+          <Send className="w-5 h-5" />
+        </button>
       </form>
+
+      {/* Date Modal */}
+      {showDateModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-full max-w-md">
+            <h3 className="text-lg font-semibold mb-4">Select Travel Dates</h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Start Date</label>
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">End Date</label>
+                <input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  required
+                />
+              </div>
+            </div>
+            <div className="mt-6 flex justify-end space-x-3">
+              <button
+                onClick={() => setShowDateModal(false)}
+                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleDateSelection}
+                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+                disabled={!startDate || !endDate}
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Travel Type Modal */}
+      {showTravelTypeModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-full max-w-md">
+            <h3 className="text-lg font-semibold mb-4">Select Travel Type</h3>
+            <div className="space-y-2">
+              {["solo", "couple", "family", "group"].map((type) => (
+                <div key={type} className="flex items-center">
+                  <input
+                    type="radio"
+                    id={type}
+                    name="travelType"
+                    value={type}
+                    checked={travelType === type}
+                    onChange={() => setTravelType(type)}
+                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <label htmlFor={type} className="ml-2 block text-sm text-gray-700 capitalize">
+                    {type}
+                  </label>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex justify-end space-x-3">
+              <button
+                onClick={() => setShowTravelTypeModal(false)}
+                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleTravelTypeSelection}
+                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Transport Modal */}
+      {showTransportModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-full max-w-md">
+            <h3 className="text-lg font-semibold mb-4">Select Transport Mode</h3>
+            <div className="space-y-2">
+              {["plane", "train", "car", "bus", "cruise"].map((mode) => (
+                <div key={mode} className="flex items-center">
+                  <input
+                    type="radio"
+                    id={mode}
+                    name="transportMode"
+                    value={mode}
+                    checked={transportMode === mode}
+                    onChange={() => setTransportMode(mode)}
+                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  <label htmlFor={mode} className="ml-2 block text-sm text-gray-700 capitalize">
+                    {mode}
+                  </label>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex justify-end space-x-3">
+              <button
+                onClick={() => setShowTransportModal(false)}
+                className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleTransportSelection}
+                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
+

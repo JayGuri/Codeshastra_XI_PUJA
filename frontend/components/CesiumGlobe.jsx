@@ -5,7 +5,7 @@ import { useEffect } from "react"
 export default function CesiumGlobe() {
   useEffect(() => {
     // Make sure Cesium is loaded
-    if (typeof window.Cesium === "undefined") {
+    if (typeof window === "undefined" || !window.Cesium) {
       console.error("Cesium is not loaded")
       return
     }
@@ -30,6 +30,7 @@ export default function CesiumGlobe() {
       timeline: false,
       navigationHelpButton: false,
       navigationInstructionsInitiallyVisible: false,
+      imageryProvider: new Cesium.IonImageryProvider({ assetId: 3 }), // Natural Earth II
     })
 
     // Remove the Cesium logo and credits container
@@ -61,6 +62,13 @@ export default function CesiumGlobe() {
       viewer.scene.camera.rotate(Cesium.Cartesian3.UNIT_Z, 0.0005)
     })
 
+    // Enable globe interaction
+    viewer.scene.screenSpaceCameraController.enableRotate = true
+    viewer.scene.screenSpaceCameraController.enableTranslate = true
+    viewer.scene.screenSpaceCameraController.enableZoom = true
+    viewer.scene.screenSpaceCameraController.enableTilt = true
+    viewer.scene.screenSpaceCameraController.enableLook = true
+
     // Cleanup function
     return () => {
       if (viewer && !viewer.isDestroyed()) {
@@ -69,5 +77,6 @@ export default function CesiumGlobe() {
     }
   }, [])
 
-  return <div id="cesiumContainer" style={{ width: "100%", height: "100vh" }}></div> // The Cesium viewer will attach to the cesiumContainer div
+  return <div id="cesiumContainer" style={{ width: "100%", height: "100vh" }}></div>
 }
+
