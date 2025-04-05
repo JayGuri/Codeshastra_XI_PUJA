@@ -3,6 +3,7 @@
 import { useState } from "react";
 import DestinationCard from "@/components/Card";
 import FilterSidebar from "@/components/FilterSidebar";
+import AuroraBackground from "@/components/AuroraBackground";
 
 export default function Community() {
   // Sample destinations array
@@ -114,61 +115,63 @@ export default function Community() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-20">
-      <h1 className="text-4xl font-bold mb-6">Community</h1>
+    <AuroraBackground className="bg-black text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-6">Community</h1>
 
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Sidebar */}
-        <div className="w-full md:w-1/4 h-[500px] overflow-y-auto">
-          <FilterSidebar onFilterChange={handleFilterChange} />
-        </div>
+        <div className="flex flex-col md:flex-row gap-8">
+          {/* Sidebar */}
+          <div className="w-full md:w-1/4 h-[500px] overflow-y-auto">
+            <FilterSidebar onFilterChange={handleFilterChange} />
+          </div>
 
-        {/* Main Content */}
-        <div className="flex-grow md:w-3/4">
-          <h2 className="text-2xl font-bold mb-6">Available Trips</h2>
+          {/* Main Content */}
+          <div className="flex-grow md:w-3/4">
+            <h2 className="text-2xl font-bold mb-6">Available Trips</h2>
 
-          {paginatedDestinations.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {paginatedDestinations.map((destination, index) => (
-                <DestinationCard key={index} destination={destination} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-10">
-              <p className="text-lg text-gray-600">
-                No destinations match your filters.
-              </p>
-              <p className="mt-2">
-                Try adjusting your filters to see more options.
-              </p>
-            </div>
-          )}
+            {paginatedDestinations.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {paginatedDestinations.map((destination, index) => (
+                  <DestinationCard key={index} destination={destination} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-10">
+                <p className="text-lg text-gray-600">
+                  No destinations match your filters.
+                </p>
+                <p className="mt-2">
+                  Try adjusting your filters to see more options.
+                </p>
+              </div>
+            )}
 
-          {/* Pagination Controls */}
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center mt-6 space-x-2">
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handlePageChange(index + 1)}
-                  className={`px-4 py-2 rounded ${
-                    currentPage === index + 1
-                      ? "bg-blue-500 text-white"
-                      : "bg-gray-200 text-gray-700"
-                  }`}
-                >
-                  {index + 1}
-                </button>
-              ))}
-            </div>
-          )}
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center mt-6 space-x-2">
+                {Array.from({ length: totalPages }, (_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePageChange(index + 1)}
+                    className={`px-4 py-2 rounded ${
+                      currentPage === index + 1
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-200 text-gray-700"
+                    }`}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+              </div>
+            )}
 
-          <p className="text-lg mt-10">
-            Join our growing community of travel enthusiasts and make your next
-            trip unforgettable!
-          </p>
+            <p className="text-lg mt-10">
+              Join our growing community of travel enthusiasts and make your
+              next trip unforgettable!
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </AuroraBackground>
   );
 }

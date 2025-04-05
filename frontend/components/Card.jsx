@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function DestinationCard({ destination }) {
   return (
-    <div className="bg-white bg-opacity-80 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden transition-all duration-300 h-full flex flex-col card-hover">
+    <div className="bg-gray-800 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg overflow-hidden transition-all duration-300 h-full flex flex-col card-hover">
       <div className="relative aspect-video w-full">
         {destination.image && destination.image.trim() !== "" ? (
           <Image
@@ -25,10 +25,10 @@ export default function DestinationCard({ destination }) {
         <h2 className="text-xl font-bold mb-2 text-gray-800 line-clamp-2">
           {destination.name}
         </h2>
-        <p className="text-gray-600 mb-2">
+        <p className="text-white mb-2">
           Location: {destination.location || "Unknown"}
         </p>
-        <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
+        <p className="text-white mb-4 flex-grow line-clamp-3">
           {destination.description || "No description available"}
         </p>
         <div className="flex justify-between items-center">

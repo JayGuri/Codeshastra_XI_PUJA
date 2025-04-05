@@ -4,7 +4,6 @@ import { Range } from "react-range";
 const PRICE_MIN = 0;
 const PRICE_MAX = 100000;
 
-
 export default function FilterSidebar({ onFilterChange }) {
   // State for tracking selected filters
   const [filters, setFilters] = useState({
@@ -77,9 +76,9 @@ export default function FilterSidebar({ onFilterChange }) {
   }, [priceRange]);
 
   return (
-    <div className="bg-white bg-opacity-80 backdrop-blur-lg rounded-xl shadow-lg p-6 sticky top-20 max-h-screen overflow-y-auto">
+    <div className="bg-gray-800 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 sticky top-20 max-h-screen overflow-y-auto">
       <div className="flex justify-between items-center mb-6">
-        <h3 className="text-xl font-bold text-gray-800">Filters</h3>
+        <h3 className="text-xl font-bold text-white">Filters</h3>
         <button
           onClick={clearFilters}
           className="text-sm text-blue-600 hover:text-blue-800"
@@ -90,7 +89,7 @@ export default function FilterSidebar({ onFilterChange }) {
 
       {/* Transport Filter */}
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Transport</h4>
+        <h4 className="font-semibold text-white mb-3">Transport</h4>
         <div className="space-y-2">
           {filterOptions.transport.map((option) => (
             <div key={option} className="flex items-center">
@@ -103,7 +102,7 @@ export default function FilterSidebar({ onFilterChange }) {
               />
               <label
                 htmlFor={`transport-${option}`}
-                className="ml-2 text-gray-700"
+                className="ml-2 text-white"
               >
                 {option}
               </label>
@@ -114,7 +113,7 @@ export default function FilterSidebar({ onFilterChange }) {
 
       {/* Budget Filter */}
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Budget</h4>
+        <h4 className="font-semibold text-white mb-3">Budget</h4>
         <div className="space-y-2">
           {filterOptions.budget.map((option) => (
             <div key={option} className="flex items-center">
@@ -125,10 +124,7 @@ export default function FilterSidebar({ onFilterChange }) {
                 onChange={() => handleFilterChange("budget", option)}
                 className="h-4 w-4 text-blue-600 rounded focus:ring-blue-500"
               />
-              <label
-                htmlFor={`budget-${option}`}
-                className="ml-2 text-gray-700"
-              >
+              <label htmlFor={`budget-${option}`} className="ml-2 text-white">
                 {option}
               </label>
             </div>
@@ -138,7 +134,7 @@ export default function FilterSidebar({ onFilterChange }) {
 
       {/* Age Group Filter */}
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Age Group</h4>
+        <h4 className="font-semibold text-white mb-3">Age Group</h4>
         <div className="space-y-2">
           {filterOptions.ageGroup.map((option) => (
             <div key={option} className="flex items-center">
@@ -149,7 +145,7 @@ export default function FilterSidebar({ onFilterChange }) {
                 onChange={() => handleFilterChange("ageGroup", option)}
                 className="h-4 w-4 text-blue-600 rounded focus:ring-blue-500"
               />
-              <label htmlFor={`age-${option}`} className="ml-2 text-gray-700">
+              <label htmlFor={`age-${option}`} className="ml-2 text-white">
                 {option}
               </label>
             </div>
@@ -159,7 +155,7 @@ export default function FilterSidebar({ onFilterChange }) {
 
       {/* Price Range Filter */}
       <div className="mb-6">
-        <h4 className="font-semibold text-gray-700 mb-3">Price Range</h4>
+        <h4 className="font-semibold text-white mb-3">Price Range</h4>
         <div className="px-2">
           <Range
             step={500}
