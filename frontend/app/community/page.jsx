@@ -104,51 +104,48 @@ export default function Community() {
   return (
     <AuroraBackground className="bg-black text-white">
       <div className="container mx-auto px-4 py-20 min-h-screen">
-        <h1 className="text-4xl ml-[300px] fixed z-100 bg-gray-900 w-full   font-bold mb-6">Community</h1>
+        <h1 className="text-4xl font-bold mb-6 ml-[320px]">Community</h1>
 
-        <div className="flex min-h-screen">
-          <div className="w-[300px]">
-            <FilterSidebar onFilterChange={handleFilterChange} />
-          </div>
-          <div className="flex-1 p-6 overflow-y-auto">
-            <h2 className="text-2xl font-bold mt-10 mb-6">Available Trips</h2>
+        {/* Sidebar */}
+        <FilterSidebar onFilterChange={handleFilterChange} />
 
-            {paginatedDestinations.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {paginatedDestinations.map((destination, index) => (
-                  <DestinationCard key={index} destination={destination} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-10">
-                <p className="text-lg text-gray-300">No destinations match your filters.</p>
-                <p className="mt-2 text-gray-400">Try adjusting your filters to see more options.</p>
-              </div>
-            )}
+        {/* Main Content */}
+        <div className="ml-[320px]">
+          <h2 className="text-2xl font-bold mb-6">Available Trips</h2>
 
-            {/* Pagination Controls */}
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center mt-6 space-x-2">
-                {Array.from({ length: totalPages }, (_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handlePageChange(index + 1)}
-                    className={`px-4 py-2 rounded ${
-                      currentPage === index + 1
-                        ? "bg-blue-500 text-white"
-                        : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                    }`}
-                  >
-                    {index + 1}
-                  </button>
-                ))}
-              </div>
-            )}
+          {paginatedDestinations.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {paginatedDestinations.map((destination, index) => (
+                <DestinationCard key={index} destination={destination} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-10">
+              <p className="text-lg text-gray-300">No destinations match your filters.</p>
+              <p className="mt-2 text-gray-400">Try adjusting your filters to see more options.</p>
+            </div>
+          )}
 
-            <p className="text-lg mt-10 mb-10">
-              Join our growing community of travel enthusiasts and make your next trip unforgettable!
-            </p>
-          </div>
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center mt-6 space-x-2">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handlePageChange(index + 1)}
+                  className={`px-4 py-2 rounded ${
+                    currentPage === index + 1 ? "bg-blue-500 text-white" : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+          )}
+
+          <p className="text-lg mt-10 mb-10">
+            Join our growing community of travel enthusiasts and make your next trip unforgettable!
+          </p>
         </div>
       </div>
     </AuroraBackground>
