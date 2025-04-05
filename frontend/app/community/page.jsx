@@ -104,17 +104,14 @@ export default function Community() {
   return (
     <AuroraBackground className="bg-black text-white">
       <div className="container mx-auto px-4 py-20 min-h-screen">
-        <h1 className="text-4xl font-bold mb-6">Community</h1>
+        <h1 className="text-4xl ml-[300px] fixed z-100 bg-gray-900 w-full   font-bold mb-6">Community</h1>
 
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Sidebar */}
-          <div className="w-full md:w-1/4">
+        <div className="flex min-h-screen">
+          <div className="w-[300px]">
             <FilterSidebar onFilterChange={handleFilterChange} />
           </div>
-
-          {/* Main Content */}
-          <div className="flex-grow md:w-3/4">
-            <h2 className="text-2xl font-bold mb-6">Available Trips</h2>
+          <div className="flex-1 p-6 overflow-y-auto">
+            <h2 className="text-2xl font-bold mt-10 mb-6">Available Trips</h2>
 
             {paginatedDestinations.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
