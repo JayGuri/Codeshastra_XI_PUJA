@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
-import { Range } from "react-range";
+"use client"
 
-const PRICE_MIN = 0;
-const PRICE_MAX = 100000;
+import { useState, useEffect } from "react"
+import { Range } from "react-range"
+
+const PRICE_MIN = 0
+const PRICE_MAX = 100000
 
 export default function FilterSidebar({ onFilterChange }) {
   // State for tracking selected filters
@@ -12,45 +14,38 @@ export default function FilterSidebar({ onFilterChange }) {
     ageGroup: [],
     minPrice: 0,
     maxPrice: 50000,
-  });
+  })
 
   // Sample filter options (you can replace these with your actual options)
   const filterOptions = {
     transport: ["Bus", "Train", "Flight", "Car"],
     budget: ["Budget Travel", "Classic Travel", "Luxury Travel"],
-    ageGroup: [
-      "Young (20-30s)",
-      "Middle-aged (30-50s)",
-      "Senior (50+)",
-      "Family Friendly",
-    ],
-  };
+    ageGroup: ["Young (20-30s)", "Middle-aged (30-50s)", "Senior (50+)", "Family Friendly"],
+  }
 
-  const [priceRange, setPriceRange] = useState([PRICE_MIN, PRICE_MAX]);
+  const [priceRange, setPriceRange] = useState([PRICE_MIN, PRICE_MAX])
 
   // Handle checkbox changes
   const handleFilterChange = (category, value) => {
     setFilters((prevFilters) => {
-      const updatedFilters = { ...prevFilters };
+      const updatedFilters = { ...prevFilters }
 
       if (updatedFilters[category].includes(value)) {
         // Remove if already selected
-        updatedFilters[category] = updatedFilters[category].filter(
-          (item) => item !== value
-        );
+        updatedFilters[category] = updatedFilters[category].filter((item) => item !== value)
       } else {
         // Add if not selected
-        updatedFilters[category] = [...updatedFilters[category], value];
+        updatedFilters[category] = [...updatedFilters[category], value]
       }
 
       // Call the parent component's callback with updated filters
       if (onFilterChange) {
-        onFilterChange(updatedFilters);
+        onFilterChange(updatedFilters)
       }
 
-      return updatedFilters;
-    });
-  };
+      return updatedFilters
+    })
+  }
 
   // Clear all filters
   const clearFilters = () => {
@@ -58,31 +53,31 @@ export default function FilterSidebar({ onFilterChange }) {
       transport: [],
       budget: [],
       ageGroup: [],
-    };
-    setFilters(emptyFilters);
-    if (onFilterChange) {
-      onFilterChange(emptyFilters);
+      minPrice: PRICE_MIN,
+      maxPrice: PRICE_MAX,
     }
-  };
+    setFilters(emptyFilters)
+    setPriceRange([PRICE_MIN, PRICE_MAX])
+    if (onFilterChange) {
+      onFilterChange(emptyFilters)
+    }
+  }
 
   useEffect(() => {
     const updatedFilters = {
       ...filters,
       minPrice: priceRange[0],
       maxPrice: priceRange[1],
-    };
-    setFilters(updatedFilters);
-    if (onFilterChange) onFilterChange(updatedFilters);
-  }, [priceRange]);
+    }
+    setFilters(updatedFilters)
+    if (onFilterChange) onFilterChange(updatedFilters)
+  }, [priceRange])
 
   return (
-    <div className="bg-gray-800 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 sticky top-20 max-h-screen overflow-y-auto">
+    <div className="bg-gray-800 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 sticky top-20 max-h-[calc(100vh-5rem)] overflow-y-auto">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-bold text-white">Filters</h3>
-        <button
-          onClick={clearFilters}
-          className="text-sm text-blue-600 hover:text-blue-800"
-        >
+        <button onClick={clearFilters} className="text-sm text-blue-400 hover:text-blue-300">
           Clear All
         </button>
       </div>
@@ -100,10 +95,7 @@ export default function FilterSidebar({ onFilterChange }) {
                 onChange={() => handleFilterChange("transport", option)}
                 className="h-4 w-4 text-blue-600 rounded focus:ring-blue-500"
               />
-              <label
-                htmlFor={`transport-${option}`}
-                className="ml-2 text-white"
-              >
+              <label htmlFor={`transport-${option}`} className="ml-2 text-white">
                 {option}
               </label>
             </div>
@@ -170,7 +162,7 @@ export default function FilterSidebar({ onFilterChange }) {
                   ...props.style,
                   height: "6px",
                   width: "100%",
-                  backgroundColor: "#ddd",
+                  backgroundColor: "#4B5563",
                   marginTop: "15px",
                 }}
               >
@@ -178,15 +170,8 @@ export default function FilterSidebar({ onFilterChange }) {
                   style={{
                     height: "100%",
                     backgroundColor: "#3b82f6",
-                    marginLeft: `${
-                      ((priceRange[0] - PRICE_MIN) / (PRICE_MAX - PRICE_MIN)) *
-                      100
-                    }%`,
-                    width: `${
-                      ((priceRange[1] - priceRange[0]) /
-                        (PRICE_MAX - PRICE_MIN)) *
-                      100
-                    }%`,
+                    marginLeft: `${((priceRange[0] - PRICE_MIN) / (PRICE_MAX - PRICE_MIN)) * 100}%`,
+                    width: `${((priceRange[1] - priceRange[0]) / (PRICE_MAX - PRICE_MIN)) * 100}%`,
                   }}
                 />
                 {children}
@@ -206,12 +191,13 @@ export default function FilterSidebar({ onFilterChange }) {
               />
             )}
           />
-          <div className="flex justify-between text-sm text-gray-600 mt-2">
-            <span>₹{priceRange[0]}</span>
-            <span>₹{priceRange[1]}</span>
+          <div className="flex justify-between text-sm text-white mt-2">
+            <span>₹{priceRange[0].toLocaleString()}</span>
+            <span>₹{priceRange[1].toLocaleString()}</span>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
+

@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { cn } from "@/lib/utils";
-import { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils"
+import { useEffect, useRef } from "react"
 
 const AuroraBackground = ({ children, className }) => {
-  const auroraRef = useRef(null);
+  const auroraRef = useRef(null)
 
   useEffect(() => {
-    const aurora = auroraRef.current;
+    const aurora = auroraRef.current
 
     const animate = () => {
-      if (!aurora) return;
+      if (!aurora) return
 
       aurora.animate(
         [
@@ -21,25 +21,24 @@ const AuroraBackground = ({ children, className }) => {
         ],
         {
           duration: 30000,
-          iterations: Infinity,
-        }
-      );
-    };
+          iterations: Number.POSITIVE_INFINITY,
+        },
+      )
+    }
 
-    animate();
-  }, []);
+    animate()
+  }, [])
 
   return (
-    <div
-      className={cn("relative w-full min-h-screen overflow-hidden", className)}
-    >
+    <div className={cn("relative w-full min-h-screen overflow-y-auto", className)}>
       <div
         ref={auroraRef}
-        className="absolute inset-0 z-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-30 blur-3xl"
+        className="fixed inset-0 z-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-30 blur-3xl"
       />
       <div className="relative z-10">{children}</div>
     </div>
-  );
-};
+  )
+}
 
-export default AuroraBackground;
+export default AuroraBackground
+
