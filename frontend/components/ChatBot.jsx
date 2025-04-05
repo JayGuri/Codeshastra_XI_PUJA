@@ -13,6 +13,8 @@ export default function ChatBot() {
   const [endDate, setEndDate] = useState("")
   const [travelType, setTravelType] = useState("solo")
   const [transportMode, setTransportMode] = useState("plane")
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [initialPromptSubmitted, setInitialPromptSubmitted] = useState(false)
 
   const messagesEndRef = useRef(null)
 
@@ -30,6 +32,12 @@ export default function ChatBot() {
 
     // Add user message
     setMessages([...messages, { type: "user", content: inputValue }])
+    setIsExpanded(true)
+
+    // Set initial prompt as submitted to show quick action buttons
+    if (!initialPromptSubmitted) {
+      setInitialPromptSubmitted(true)
+    }
 
     // Process the message (in a real app, this would involve NLP)
     setTimeout(() => {
@@ -81,7 +89,9 @@ export default function ChatBot() {
 
   return (
     <div
-      className={`flex flex-col ${messages.length > 0 ? "h-[280px]" : "h-[140px]"} w-full max-w-md bg-black/40 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden border border-white/20 transition-all duration-300`}
+      className={`flex flex-col ${
+        initialPromptSubmitted ? "h-[400px]" : isExpanded || messages.length > 0 ? "h-[280px]" : "h-auto"
+      } w-full max-w-md bg-black/40 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden border border-white/20 transition-all duration-500`}
     >
       {/* Chat header */}
       <div className="bg-black/80 text-white px-5 py-3 flex items-center justify-between border-b border-white/10">
@@ -101,7 +111,7 @@ export default function ChatBot() {
       {messages.length > 0 && (
         <div className="flex-1 p-4 overflow-y-auto bg-transparent">
           {messages.map((message, index) => (
-            <div key={index} className={`mb-3 ${message.type === "user" ? "text-right" : "text-left"}`}>
+            <div key={index} className={`mb-4 ${message.type === "user" ? "text-right" : "text-left"}`}>
               <div
                 className={`inline-block px-4 py-2.5 rounded-lg max-w-[85%] text-base ${
                   message.type === "user"
@@ -123,7 +133,7 @@ export default function ChatBot() {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Enter destination, number of people, days, budget..."
+          placeholder="Enter destination, people, days, budget..."
           className="flex-1 px-4 py-2.5 text-base border border-gray-500/40 rounded-l-md focus:outline-none focus:ring-1 focus:ring-white/50 bg-black/30 text-white placeholder-gray-300"
         />
         <button
@@ -134,30 +144,36 @@ export default function ChatBot() {
         </button>
       </form>
 
-      {/* Quick action buttons */}
-      <div className="px-3 py-2.5 border-t border-white/10 flex space-x-3 overflow-x-auto bg-black/30 backdrop-blur-md">
-        <button
-          onClick={() => setShowDateModal(true)}
-          className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm"
-        >
-          <Calendar className="w-4 h-4 mr-1.5" />
-          Dates
-        </button>
-        <button
-          onClick={() => setShowTravelTypeModal(true)}
-          className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm"
-        >
-          <Users className="w-4 h-4 mr-1.5" />
-          Type
-        </button>
-        <button
-          onClick={() => setShowTransportModal(true)}
-          className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm"
-        >
-          <Plane className="w-4 h-4 mr-1.5" />
-          Transport
-        </button>
-      </div>
+      {/* Quick action buttons - only show after initial prompt */}
+      {initialPromptSubmitted && (
+        <div className="px-3 py-2.5 border-t border-white/10 flex space-x-3 overflow-x-auto bg-black/30 backdrop-blur-md">
+          {/* Animated buttons */}
+          <button
+            onClick={() => setShowDateModal(true)}
+            className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm animate-fadeInUp"
+            style={{ animationDelay: "0ms" }}
+          >
+            <Calendar className="w-4 h-4 mr-1.5" />
+            Dates
+          </button>
+          <button
+            onClick={() => setShowTravelTypeModal(true)}
+            className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm animate-fadeInUp"
+            style={{ animationDelay: "150ms" }}
+          >
+            <Users className="w-4 h-4 mr-1.5" />
+            Type
+          </button>
+          <button
+            onClick={() => setShowTransportModal(true)}
+            className="flex items-center px-3 py-1.5 bg-white/10 text-white rounded-full text-sm whitespace-nowrap hover:bg-white/20 transition-colors shadow-sm animate-fadeInUp"
+            style={{ animationDelay: "300ms" }}
+          >
+            <Plane className="w-4 h-4 mr-1.5" />
+            Transport
+          </button>
+        </div>
+      )}
 
       {/* Date Modal */}
       {showDateModal && (
@@ -270,7 +286,7 @@ export default function ChatBot() {
           <div className="bg-black/80 backdrop-blur-lg p-5 rounded-xl w-full max-w-xs border border-white/20 text-white shadow-2xl">
             <h3 className="text-base font-semibold mb-4">Select Transport Mode</h3>
             <div className="space-y-3">
-              {["plane", "train", "car", "bus", "cruise"].map((mode) => (
+              {["plane", "train", "car", "bus"].map((mode) => (
                 <div key={mode} className="flex items-center p-1.5">
                   <input
                     type="radio"

@@ -21,7 +21,7 @@ export default function Home() {
 
       {/* Chatbot overlay - positioned in center */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-        <div className="pointer-events-auto w-full max-w-md">
+        <div className="pointer-events-auto w-full max-w-md px-4">
           <ChatBot />
         </div>
       </div>
