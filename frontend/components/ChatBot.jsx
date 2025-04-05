@@ -178,7 +178,7 @@ export default function ChatBot() {
     <div
       ref={chatbotRef}
       className={`flex flex-col h-[500px] w-full max-w-md bg-black/40 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden border border-white/20 transition-all duration-500 ${
-        !formMode ? "fixed right-0 top-20 z-50 rounded-r-none" : ""
+        !formMode ? "fixed right-0 top-40 z-50 rounded-r-none" : ""
       }`}
     >
       {/* Chat header */}
