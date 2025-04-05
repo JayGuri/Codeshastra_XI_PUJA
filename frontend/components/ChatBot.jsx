@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { Send, Calendar, Users, Plane } from "lucide-react"
+import { Send, Calendar, Users, Plane, MapPin } from "lucide-react"
 
 export default function ChatBot() {
   const [messages, setMessages] = useState([
@@ -86,21 +86,22 @@ export default function ChatBot() {
   }
 
   return (
-    <div className="flex flex-col h-[400px] bg-white/80 backdrop-blur-md rounded-lg shadow-xl overflow-hidden border border-gray-200">
+    <div className="flex flex-col h-[450px] w-full bg-white/80 backdrop-blur-md rounded-xl shadow-2xl overflow-hidden border border-white/20">
       {/* Chat header */}
-      <div className="bg-indigo-600 text-white px-4 py-3">
+      <div className="bg-indigo-600 text-white px-4 py-3 flex items-center">
+        <MapPin className="w-5 h-5 mr-2" />
         <h3 className="font-medium">Travel Assistant</h3>
       </div>
 
       {/* Chat messages */}
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-y-auto bg-gray-50/50">
         {messages.map((message, index) => (
           <div key={index} className={`mb-4 ${message.type === "user" ? "text-right" : "text-left"}`}>
             <div
-              className={`inline-block px-4 py-2 rounded-lg ${
+              className={`inline-block px-4 py-2 rounded-lg max-w-[85%] ${
                 message.type === "user"
                   ? "bg-indigo-600 text-white rounded-tr-none"
-                  : "bg-gray-200 text-gray-800 rounded-tl-none"
+                  : "bg-white text-gray-800 rounded-tl-none shadow-sm"
               }`}
             >
               {message.content}
@@ -111,24 +112,24 @@ export default function ChatBot() {
       </div>
 
       {/* Quick action buttons */}
-      <div className="px-4 py-2 border-t border-gray-200 flex space-x-2 overflow-x-auto">
+      <div className="px-4 py-2 border-t border-gray-200 flex space-x-2 overflow-x-auto bg-white/70">
         <button
           onClick={() => setShowDateModal(true)}
-          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap"
+          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap hover:bg-indigo-200 transition-colors"
         >
           <Calendar className="w-4 h-4 mr-1" />
           Travel Dates
         </button>
         <button
           onClick={() => setShowTravelTypeModal(true)}
-          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap"
+          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap hover:bg-indigo-200 transition-colors"
         >
           <Users className="w-4 h-4 mr-1" />
           Travel Type
         </button>
         <button
           onClick={() => setShowTransportModal(true)}
-          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap"
+          className="flex items-center px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm whitespace-nowrap hover:bg-indigo-200 transition-colors"
         >
           <Plane className="w-4 h-4 mr-1" />
           Transport
@@ -136,17 +137,17 @@ export default function ChatBot() {
       </div>
 
       {/* Input area */}
-      <form onSubmit={handleSendMessage} className="p-3 border-t border-gray-200 flex">
+      <form onSubmit={handleSendMessage} className="p-3 border-t border-gray-200 flex bg-white/70">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Enter destination, people, days, and budget..."
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white/80"
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 transition-colors"
+          className="px-4 py-2 bg-indigo-600 text-white rounded-r-md hover:bg-indigo-700 transition-colors flex items-center justify-center"
         >
           <Send className="w-5 h-5" />
         </button>

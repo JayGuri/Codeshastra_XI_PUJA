@@ -9,14 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Cesium scripts */}
-        <script src="https://cesium.com/downloads/cesiumjs/releases/1.104/Build/Cesium/Cesium.js"></script>
-        <link
-          href="https://cesium.com/downloads/cesiumjs/releases/1.104/Build/Cesium/Widgets/widgets.css"
-          rel="stylesheet"
-        />
-      </head>
+      <head>{/* Removed Cesium scripts from here - we'll load them dynamically */}</head>
       <body>
         <Navbar />
         {children}
@@ -24,3 +17,4 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
