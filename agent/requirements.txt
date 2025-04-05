@@ -1,3 +1,4 @@
 crewai
 langchain-openai
 python-dotenv
+langchain-community

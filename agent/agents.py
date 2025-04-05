@@ -1,9 +1,10 @@
 from crewai import Agent
 from tools.search_tools import scrape_web_tool
 from crewai import LLM
-from tools.google_maps_tool import GoogleMapsTool
+#from tools.google_maps_tool import GoogleMapsTool
+
 #from pydantic import BaseModel
-maps = GoogleMapsTool()
+#maps = GoogleMapsTool()
 #class Weather(BaseModel):
 #   city: str
  #   temp: int
@@ -19,7 +20,7 @@ season_agent = Agent(
     tools=[scrape_web_tool],
     verbose =True,
     max_iter=5,
-    llm = LLM(model="gpt-4o"),
+    llm = LLM(model="gemini/gemini-2.0-flash"),
     allow_delegation = False,
 )
 
@@ -31,7 +32,7 @@ location_agent = Agent(
     tools=[scrape_web_tool],
     verbose =True,
     max_iter=5,
-    llm = LLM(model="gpt-4o"),
+    llm = LLM(model="gemini/gemini-2.0-flash"),
     allow_delegation = False,
 )
 
@@ -42,7 +43,7 @@ persona_agent = Agent(
     backstory ="You're a psychologist-turned-travel-consultant who crafts journeys that suit people's vibes perfectly.",
     verbose =True,
     max_iter=5,
-    llm = LLM(model="gpt-4o"),
+    llm = LLM(model="gemini/gemini-2.0-flash"),
     allow_delegation = False,
 )
 
@@ -54,7 +55,7 @@ lodging_agent = Agent(
         tools=[scrape_web_tool],
         verbose=True,
         async_execution=False,
-        function_calling_llm="gpt-4"
+        function_calling_llm="gemini/gemini-2.0-flash"
     )
 
 #transportation agent 
@@ -68,9 +69,28 @@ transport_agent = Agent(
     ),
     verbose=True,
     allow_delegation=False,
-    tools=[scrape_web_tool, maps],
+    tools=[scrape_web_tool],
     async_execution=False,
+    function_calling_llm= "gemini/gemini-2.0-flash"
 )
 
+budget_agent = Agent(
+    name="Budget Strategist",
+    role="Splits overall trip budget into lodging, transport, food, and activities",
+    goal="Distribute the user's budget wisely according to the luxury level and number of people.",
+    backstory="You're a financial planner for travel who optimizes budgets for fun and comfort.",
+    verbose=True,
+    async_execution=False,
+    function_calling_llm="gemini/gemini-2.0-flash"
+)
 
-
+planner_agent = Agent(
+    role="Travel Planning Expert",
+    goal="Compiles all gathered information to create a travel plan.",
+    backstory="An expert in planning seamless travel itineraries.",
+    tools=[scrape_web_tool],
+    verbose=True,
+    max_iter=5,
+    llm = LLM(model="gemini/gemini-2.0-flash"),
+    allow_delegation=False,
+)

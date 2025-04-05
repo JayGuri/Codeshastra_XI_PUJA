@@ -1,5 +1,5 @@
-from agents import season_agent , location_agent
-from tasks import location_task, weather_task
+from agents import season_agent , location_agent , lodging_agent , persona_agent , planner_agent
+from tasks import location_task, weather_task , lodging_task , persona_task , planner_task
 from crewai import Crew, Process
 import streamlit as st
 
@@ -18,6 +18,8 @@ from_city = st.text_input("🏡 From City", "India")
 destination_city = st.text_input("✈️ Destination City", "Rome")
 date_from = st.date_input("📅 Departure Date")
 date_to = st.date_input("📅 Return Date")
+people = st.text_input("Number of people ")
+relationship = st.text_input("Couple , solo , Family , Friends")
 interests = st.text_area("🎯 Your Interests (e.g., sightseeing, food, adventure)", "sightseeing and good food")
 
 # Button to run CrewAI
@@ -30,12 +32,15 @@ if st.button("🚀 Generate Travel Plan"):
         # Initialize Tasks
         loc_task = location_task(location_agent, from_city, destination_city, date_from, date_to)
         weather_task = weather_task(season_agent, destination_city , date_from, date_to)
-        # plan_task = planner_task([loc_task, guid_task], planner_expert, destination_city, interests, date_from, date_to)
+        persona_task = persona_task(persona_agent,people,relationship)
+        lodging_task = lodging_task([loc_task,persona_task] ,lodging_agent,people)
+        planner_task = planner_task([loc_task, weather_task,lodging_task,persona_task], planner_agent)
+
 
         # Define Crew
         crew = Crew(
-            agents=[location_agent, season_agent],
-            tasks=[loc_task, weather_task],
+            agents=[location_agent, season_agent ,persona_agent, lodging_agent   , planner_agent],
+            tasks=[loc_task, weather_task ,persona_task ,lodging_task, planner_task ],
             process=Process.sequential,
             full_output=True,
             verbose=True,
