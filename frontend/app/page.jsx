@@ -24,6 +24,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("globe");
   const [globeType, setGlobeType] = useState("cesium"); // "cesium" or "google"
   const [showChat, setShowChat] = useState(false);
+  const [coordinates, setCoordinates] = useState(null);
 
   const mapInstanceRef = useRef(null);
 
@@ -82,7 +83,13 @@ export default function Home() {
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
           {isClient && activeTab === "globe" && globeType === "cesium" && (
-            <CesiumGlobe onMapCreated={handleMapCreated} />
+            <CesiumGlobe 
+              sourceLat={coordinates?.source?.lat}
+              sourceLng={coordinates?.source?.lng}
+              destLat={coordinates?.destination?.lat}
+              destLng={coordinates?.destination?.lng}
+              onMapCreated={handleMapCreated}
+            />
           )}
           {isClient && activeTab === "globe" && globeType === "google" && (
             <GoogleEarthGlobe onMapCreated={handleMapCreated} />
@@ -94,7 +101,7 @@ export default function Home() {
         {/* Chatbot overlay - centered in form mode */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <div className="pointer-events-auto w-full max-w-md px-4">
-            <ChatBot />
+            <ChatBot onCoordinatesChange={setCoordinates} />
           </div>
         </div>
       </div>

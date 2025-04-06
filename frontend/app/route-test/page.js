@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { getCoordinates } from '../../utils/geocodingService'
+import { geocodeAddress } from '../../utils/geocodingService'
 import { getRouteCoordinates } from '../../utils/routingService'
 import CesiumGlobe from '../../components/CesiumGlobe'
 import ChatBot from '../../components/ChatBot'
@@ -16,8 +16,8 @@ export default function RouteTest() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     
-    const sourceCoords = await getCoordinates(source)
-    const destCoords = await getCoordinates(destination)
+    const sourceCoords = await geocodeAddress(source)
+    const destCoords = await geocodeAddress(destination)
     
     if (!sourceCoords || !destCoords) {
       alert('Could not find coordinates for one or both locations')

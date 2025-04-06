@@ -3,29 +3,31 @@
 import { useEffect, useRef } from "react"
 import { getRouteCoordinates } from "../utils/routingService"
 
-export default function CesiumGlobe() {
+export default function CesiumGlobe({ sourceLat, sourceLng, destLat, destLng }) {
   const containerRef = useRef(null)
   const viewerRef = useRef(null)
 
   const addPinsAndPath = async (viewer, Cesium) => {
-    const mumbaiLat = 19.0760
-    const mumbaiLng = 72.8777
-    const puneLat = 18.5204
-    const puneLng = 73.8567
+    if (!sourceLat || !sourceLng || !destLat || !destLng) {
+      return;
+    }
 
-    const mumbaiPosition = Cesium.Cartesian3.fromDegrees(mumbaiLng, mumbaiLat, 100)
-    const punePosition = Cesium.Cartesian3.fromDegrees(puneLng, puneLat, 100)
+    // Clear existing entities
+    viewer.entities.removeAll();
 
-    // Add Mumbai pin
+    const sourcePosition = Cesium.Cartesian3.fromDegrees(sourceLng, sourceLat, 100)
+    const destPosition = Cesium.Cartesian3.fromDegrees(destLng, destLat, 100)
+
+    // Add source pin
     viewer.entities.add({
-      position: mumbaiPosition,
+      position: sourcePosition,
       billboard: {
-        image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InJlZCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+',
+        image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9ImdyZWVuIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=',
         verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
         scale: 0.5,
       },
       label: {
-        text: 'Mumbai',
+        text: 'Source',
         font: '14pt sans-serif',
         style: Cesium.LabelStyle.FILL_AND_OUTLINE,
         outlineWidth: 2,
@@ -34,16 +36,16 @@ export default function CesiumGlobe() {
       },
     })
 
-    // Add Pune pin
+    // Add destination pin
     viewer.entities.add({
-      position: punePosition,
+      position: destPosition,
       billboard: {
         image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InJlZCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+',
         verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
         scale: 0.5,
       },
       label: {
-        text: 'Pune',
+        text: 'Destination',
         font: '14pt sans-serif',
         style: Cesium.LabelStyle.FILL_AND_OUTLINE,
         outlineWidth: 2,
@@ -53,7 +55,7 @@ export default function CesiumGlobe() {
     })
 
     // Get route coordinates
-    const routeCoords = await getRouteCoordinates(mumbaiLat, mumbaiLng, puneLat, puneLng)
+    const routeCoords = await getRouteCoordinates(sourceLat, sourceLng, destLat, destLng)
     
     if (routeCoords) {
       // Convert route coordinates to Cartesian3 array
@@ -72,13 +74,19 @@ export default function CesiumGlobe() {
           }),
         },
       })
-    }
 
-    // Set camera to view both cities
-    viewer.camera.flyTo({
-      destination: Cesium.Rectangle.fromDegrees(72.5, 18.0, 74.0, 19.5),
-      duration: 3,
-    })
+      // Calculate bounding rectangle to view both locations
+      const west = Math.min(sourceLng, destLng) - 0.5;
+      const south = Math.min(sourceLat, destLat) - 0.5;
+      const east = Math.max(sourceLng, destLng) + 0.5;
+      const north = Math.max(sourceLat, destLat) + 0.5;
+
+      // Set camera to view the entire route
+      viewer.camera.flyTo({
+        destination: Cesium.Rectangle.fromDegrees(west, south, east, north),
+        duration: 3,
+      });
+    }
   }
 
   useEffect(() => {
@@ -202,6 +210,12 @@ export default function CesiumGlobe() {
       }
     }
   }, [])
+
+  useEffect(() => {
+    if (viewerRef.current && !viewerRef.current.isDestroyed() && (sourceLat || destLat)) {
+      addPinsAndPath(viewerRef.current, window.Cesium);
+    }
+  }, [sourceLat, sourceLng, destLat, destLng]);
 
   return <div ref={containerRef} id="cesiumContainer" style={{ width: "100%", height: "100vh" }}></div>
 }
