@@ -14,7 +14,7 @@ export default function Community() {
       location: "Manali, Himachal Pradesh",
       description:
         "Experience the thrill of the Himalayas with a group of adventure enthusiasts. Trek through scenic trails, enjoy river rafting, and explore local culture in this 7-day expedition.",
-      image: "/images/manali.jpg",
+      image: "/Images/manali.jpeg",
       currentPeople: 12,
       maxPeople: 16,
       transport: "Bus",
@@ -27,7 +27,7 @@ export default function Community() {
       location: "North Goa",
       description:
         "Relax on pristine beaches, enjoy water sports and experience the vibrant nightlife in this 5-day getaway to Goa.",
-      image: "/images/goa.jpg",
+      image: "/Images/goa.jpeg",
       currentPeople: 8,
       maxPeople: 12,
       transport: "Flight",
@@ -40,7 +40,7 @@ export default function Community() {
       location: "Alleppey, Kerala",
       description:
         "Experience the serene backwaters of Kerala on a houseboat, explore spice plantations and enjoy authentic Kerala cuisine.",
-      image: "/images/kerala.jpg",
+      image: "/Images/kerela.jpeg",
       currentPeople: 6,
       maxPeople: 10,
       transport: "Train",
@@ -53,7 +53,7 @@ export default function Community() {
       location: "Jaipur, Udaipur, Jodhpur",
       description:
         "Explore the royal heritage of Rajasthan by visiting magnificent forts, palaces and experiencing the rich culture and cuisine.",
-      image: "/images/rajasthan.jpg",
+      image: "/Images/rajasthan.jpeg",
       currentPeople: 15,
       maxPeople: 20,
       transport: "Train",
