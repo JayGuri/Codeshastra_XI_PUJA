@@ -9,4 +9,4 @@ def scrape_web_tool(query: str):
     search_tool = DuckDuckGoSearchResults(num_results=10, verbose=True)
     return search_tool.run(query)
 
-# Web scraping tool
+# Web scraping tool 
