@@ -243,9 +243,6 @@ export default function ChatBot({ onCoordinatesChange }) {
           type: "bot",
           content: (
             <div className="prose max-w-none relative">
-              <div className="absolute top-2 right-2">
-                <DownloadButton content={markdownContent} />
-              </div>
               <CustomMarkdown>{markdownContent}</CustomMarkdown>
             </div>
           ),
@@ -554,11 +551,6 @@ export default function ChatBot({ onCoordinatesChange }) {
                   message.content
                 ) : (
                   <div className="relative">
-                    {message.type === 'bot' && (
-                      <div className="absolute top-0 right-0 z-10">
-                        <DownloadButton content={message.content.props.children[1].props.children} />
-                      </div>
-                    )}
                     {message.content}
                   </div>
                 )}
