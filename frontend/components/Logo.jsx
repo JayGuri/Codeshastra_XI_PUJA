@@ -14,7 +14,7 @@ export default function Logo() {
           priority
         />
       </div>
-      <span className="ml-2 text-xl font-bold text-white">TravelSage</span>
+      <span className="ml-2 text-xl font-bold text-white">PUJA Travels</span>
     </div>
   )
 }
