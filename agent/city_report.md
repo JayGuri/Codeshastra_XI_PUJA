@@ -1,87 +1,55 @@
-# Los Angeles Travel Report (April 9-13, 2025)
+## Delhi Travel Report: April 6 - April 7, 2025
 
-## Travel Information
+**Trip Overview:** This report provides information for a trip from Mumbai to Delhi, arriving on April 6, 2025, and departing on April 7, 2025. It includes information on major attractions, trendy places, visa requirements, and local events.
 
-*   **Origin:** Mumbai, India
-*   **Destination:** Los Angeles, USA
-*   **Arrival Date:** 2025-04-09
-*   **Departure Date:** 2025-04-13
+**Visa Requirements:** As this is a domestic trip within India, visa requirements are not applicable for Indian citizens.
 
-## Visa Requirements for Indian Citizens
+**Major Attractions:**
 
-Indian citizens require a visa to enter the United States. It is mandatory to secure a visa prior to arrival.
+*   **Red Fort (Lal Qila):** A UNESCO World Heritage site and an iconic landmark in Old Delhi. Built by Emperor Shah Jahan, it served as the main residence of the Mughal emperors. Expect to spend 2-3 hours here.
+    *   *Entry Fee:* Indian citizens: ₹80, Foreign nationals: ₹300.
+    *   *Offer:* Often has discounts on combined tickets with other monuments. Check the Archaeological Survey of India (ASI) website.
+*   **Qutub Minar:** Another UNESCO World Heritage site, Qutub Minar is a towering minaret showcasing Indo-Islamic architecture. Plan for 1.5 - 2 hours.
+    *   *Entry Fee:* Indian citizens: ₹40, Foreign nationals: ₹600.
+*   **India Gate:** A war memorial dedicated to Indian soldiers. It's surrounded by lawns, ideal for picnics. Good for a relaxed 1-hour visit.
+    *   *Entry Fee:* Free
+*   **Humayun's Tomb:** A precursor to the Taj Mahal, this tomb is a beautiful example of Mughal architecture. Allow 2 hours for a thorough visit.
+    *   *Entry Fee:* Indian citizens: ₹40, Foreign nationals: ₹600.
+*   **Lotus Temple:** A modern architectural marvel known for its lotus-shaped design. A quick 1-hour visit should suffice.
+    *   *Entry Fee:* Free
+*   **Akshardham Temple:** A sprawling complex dedicated to Swaminarayan, showcasing Indian art, culture, and architecture. Plan for at least 3-4 hours.
+    *   *Entry Fee:* Free entry to the complex; exhibitions have separate charges (around ₹250).
+*   **Jama Masjid:** One of the largest mosques in India, located near the Red Fort.
+    *   *Entry Fee:* Free, but a fee is charged for photography (around ₹300).
+*   **Hauz Khas Village:** A trendy area with historic ruins, a picturesque lake, vibrant nightlife, cafes, and boutiques. Great for an evening visit.
 
-*   **Type:** Typically, a B1/B2 Tourist Visa is required for tourism purposes.
-*   **Application Fee:** The US visa application fee for Indian citizens is approximately $185 (approximately INR 15,400).
-*   **Validity:** The B1/B2 visa can be issued for up to 10 years, allowing multiple entries.
-*   **Requirements:**
-    *   A valid Indian passport with at least six months of validity beyond your planned stay.
-    *   Completed DS-160 form.
-    *   Recent photograph meeting US visa specifications.
-    *   Demonstrate strong ties to your home country through a job/business, property, or family.
-*   **Important Note:** Due to high application volumes, expect increased wait times for visa interviews. It is crucial to apply well in advance of your travel date.
+**Trendy Places:**
 
-## Major Attractions & Trendy Places
+*   **Hauz Khas Village:** As mentioned above, this is a must-visit for its unique blend of history and modernity.
+    *   *Average Cost:* Cafe visits can cost ₹800-₹1500 per person.
+*   **Connaught Place (CP):** The heart of Delhi's shopping and dining scene, featuring colonial architecture, restaurants, cafes, and high-end stores.
+    *   *Average Cost:* Varies widely depending on the restaurant or shop.
+*   **Khan Market:** An upscale market with boutiques, bookstores, and restaurants.
+    *   *Average Cost:* Similar to CP, prices vary.
+*   **Dilli Haat:** An open-air market offering handicrafts, food, and cultural performances from various Indian states.
+    *   *Entry Fee:* ₹30 for adults, ₹20 for children.
+*   **Garden of Five Senses:** A beautiful garden with diverse flora, sculptures, and water features.
+    *   *Entry Fee:* ₹35 for adults, ₹15 for children, ₹100 for foreigners
 
-Los Angeles offers a diverse range of attractions, from iconic landmarks to trendy hotspots. Here are some recommendations:
+**Local Events (April 6-7, 2025):**
 
-1.  **Griffith Observatory:**
-    *   **Description:** Offers breathtaking panoramic views of Los Angeles, the Hollywood Sign, and the night sky. It also houses exhibits related to space and science.
-    *   **Entry Fee:** Free (planetarium shows have a separate fee).
-    *   **Average visit duration:** 2-3 hours
-    *   **Offers:** Free public telescopes are available every night, weather permitting.
-2.  **Hollywood Walk of Fame:**
-    *   **Description:** A famous sidewalk along Hollywood Boulevard and Vine Street with stars commemorating celebrities in the entertainment industry.
-    *   **Entry Fee:** Free.
-    *   **Average visit duration:** 1-2 hours.
-    *   **Offers:** Free to walk and view the stars.
-3.  **Universal Studios Hollywood:**
-    *   **Description:** A film studio and theme park offering behind-the-scenes tours, rides, and attractions based on popular movies and TV shows.
-    *   **Entry Fee:** Approximately $109 - $149 (prices vary depending on the day and season). Check the official website for current pricing and deals.
-    *   **Average visit duration:** Full day.
-    *   **Offers:** Consider purchasing tickets online in advance for potential discounts.
-4.  **Santa Monica Pier & Beach:**
-    *   **Description:** A historic pier with amusement park rides, games, restaurants, and shops. The adjacent beach is perfect for sunbathing and swimming.
-    *   **Entry Fee:** Free (rides and games have separate fees).
-    *   **Average visit duration:** 2-4 hours
-    *   **Offers:** Free access to the beach, and you can enjoy the sunset views.
-5.  **The Getty Center:**
-    *   **Description:** An art museum with pre-20th-century European paintings, drawings, sculptures, illuminated manuscripts, decorative arts, and photography. Also features beautiful gardens and architecture.
-    *   **Entry Fee:** Free (parking fee applies).
-    *   **Average visit duration:** 3-4 hours
-    *   **Offers:** Free admission to the museum.
-6.  **Abbot Kinney Boulevard:**
-    *   **Description:** A trendy street in Venice known for its boutiques, art galleries, coffee shops, and restaurants.
-    *   **Entry Fee:** N/A
-    *   **Average visit duration:** 2-3 hours
-    *   **Offers:** Window shopping and exploring the unique stores are free.
-7.  **La Brea Tar Pits:**
-    *   **Description:** An active paleontological research site in urban Los Angeles. See Ice Age fossils and learn about prehistoric life.
-    *   **Entry Fee:** Adults: $15, Seniors (62+): $12, Students (13-17): $12, Children (3-12): $7
-    *   **Average visit duration:** 2 hours
-    *   **Offers:** Membership options are available for discounted or free admission.
-8.  **The Broad:**
-    *   **Description:** A contemporary art museum in downtown Los Angeles. Free general admission.
-    *   **Entry Fee:** Free (Special exhibitions may require tickets)
-    *   **Average visit duration:** 2-3 hours
-    *   **Offers:** Free general admission, but advance online reservations are highly recommended.
-9.  **Sixth Street Viaduct:**
-    *   **Description:** A scenic bridge connecting Downtown L.A. with Boyle Heights, offering great views.
-    *   **Entry Fee:** Free
-    *   **Average visit duration:** 1 hour.
-    *   **Offers:** Free to visit and take photos.
+*   **Sitar for Mental Health by Rishab Rikhiram Sharma:** An evening of healing through music, combining the tranquility of the sitar with a conversation around mental well-being.
+    *   *Date:* April 6, 2025
+    *   *Time:* 7 PM Onwards
+    *   *Venue:* Indira Gandhi Arena, Delhi
+*   **IPL Matches:** The IPL season will be in full swing. Catch a Delhi Capitals match at a sports bar. (Check schedule closer to the date).
 
-## Local Events (April 9-13, 2025)
+**Additional Tips:**
 
-*   **Acura Grand Prix of Long Beach (April 11-13, 2025):** A spectacular 3-day street race festival. This may require advance ticket purchase, so book ahead.
-*   **Bob Baker Day (April 13, 2025):** A festive carnival atmosphere at Los Angeles State Historic Park with music, games, and puppets. Free to attend (donations suggested).
-*   **Dodgers Home Game (April 13, 2025):** Catch a baseball game at Dodger Stadium. Tickets can be purchased online.
+*   **Transportation:** Delhi has a well-connected metro system. Consider using it to avoid traffic. You can also use ride-sharing apps like Uber and Ola.
+*   **Accommodation:** Popular areas to stay include Connaught Place, Karol Bagh, and South Delhi.
+*   **Weather:** April in Delhi is typically hot. Carry water and wear light clothing.
+*   **Bargaining:** Bargaining is common in markets like Dilli Haat.
+*    **Safety:** Be aware of your surroundings and take precautions against petty theft, especially in crowded areas.
 
-## Additional Tips
-
-*   **Transportation:** Los Angeles is a car-dependent city. Consider renting a car for maximum flexibility. Alternatively, utilize ride-sharing services or public transportation (Metro).
-*   **Accommodation:** Book your accommodation well in advance, especially if traveling during peak season.
-*   **Weather:** Expect pleasant weather in April, with average temperatures ranging from 60-70°F (15-21°C).
-*   **Currency:** The currency in the United States is the US dollar (USD).
-
-Enjoy your trip to Los Angeles!
+Enjoy your trip to Delhi!

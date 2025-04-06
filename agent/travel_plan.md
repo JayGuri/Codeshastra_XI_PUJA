@@ -1,150 +1,127 @@
-```markdown
-# Los Angeles Itinerary: Friends Trip (April 9-13, 2025)
+# Delhi Solo Travel Itinerary: April 6-7, 2025
 
-## Travel Information
+## Trip Overview
 
-*   **Origin:** Mumbai, India
-*   **Destination:** Los Angeles, USA
-*   **Arrival Date:** 2025-04-09
-*   **Departure Date:** 2025-04-13
-*   **Group Size:** 5 Friends
+This itinerary is designed for a solo traveler visiting Delhi from April 6-7, 2025, focusing on independent exploration and cultural immersion. It incorporates major attractions, trendy places, local events, and provides cost estimates and safety tips.
 
-## Visa Requirements
+## Daily Schedule
 
-*   Indian citizens need a US B1/B2 Tourist Visa. Apply well in advance!
-*   Application Fee: ~$185 USD (INR 15,400)
+### Day 1: April 6, 2025
 
-## Accommodation Recommendation
+*   **8:00 AM:** Arrive in Delhi from Mumbai.
+    *   Take the Airport Express Metro Line to New Delhi Railway Station or a pre-booked Uber/Ola to your accommodation in Connaught Place/Paharganj.
+    *   *Transportation Cost:* ₹60 (Metro) / ₹300-₹500 (Uber/Ola)
+*   **9:00 AM:** Check into Hostel Zostel Delhi.
+    *   *Accommodation Cost:* ₹800.
+*   **9:30 AM:** Breakfast at a local cafe near Connaught Place.
+    *   *Food Cost:* ₹200.
+*   **10:30 AM:** Visit India Gate.
+    *   Stroll around, take pictures, and soak in the atmosphere.
+    *   *Entry Fee:* Free.
+*   **12:00 PM:** Take the metro to Red Fort (Lal Qila).
+    *   *Transportation Cost:* ₹30.
+    *   *Entry Fee:* ₹80 (Indian citizen).
+    *   Explore the fort, visit the museum, and take a guided tour (optional).
+    *   *Guided Tour Cost (Optional):* ₹150.
+*   **3:00 PM:** Lunch at Karim's near Jama Masjid.
+    *   Enjoy Mughlai cuisine.
+    *   *Food Cost:* ₹500.
+*   **4:00 PM:** Visit Jama Masjid.
+    *   *Entry Fee:* Free (Photography fee: ₹300).
+    *   Explore the mosque and climb the minaret for a panoramic view of Old Delhi.
+*   **5:30 PM:** Explore Chandni Chowk Market.
+    *   Wander through the bustling lanes, sample street food, and shop for souvenirs.
+    *   *Shopping/Snacks:* ₹300.
+*   **7:00 PM:** Travel to Indira Gandhi Arena, Delhi.
+    *   *Transportation Cost:* ₹200 (Uber/Ola).
+*   **8:00 PM:** Attend "Sitar for Mental Health by Rishab Rikhiram Sharma."
+    *   *Entry Fee:* Check online booking platforms (e.g., BookMyShow). Assume ₹500
+    *   Enjoy an evening of healing music and conversation.
+*   **10:00 PM:** Dinner at a restaurant near Indira Gandhi Arena.
+    *   *Food Cost:* ₹600.
+*   **11:00 PM:** Return to your accommodation.
+    *   *Transportation Cost:* ₹200 (Uber/Ola).
 
-*   **Type:** Airbnb/VRBO - Rent a house for the group.
-*   **Location:** Hollywood/West Hollywood area.
-*   **Estimated Cost:** $350/night (Total: $1400 for 4 nights)
+### Day 2: April 7, 2025
 
-## Daily Itinerary
+*   **8:00 AM:** Breakfast at the hostel or a nearby cafe.
+    *   *Food Cost:* ₹200.
+*   **9:00 AM:** Take the metro to Qutub Minar.
+    *   *Transportation Cost:* ₹40.
+    *   *Entry Fee:* ₹40 (Indian citizen).
+    *   Explore the Qutub Minar complex.
+*   **11:00 AM:** Take the metro to Humayun's Tomb.
+    *   *Transportation Cost:* ₹30.
+    *   *Entry Fee:* ₹40 (Indian citizen).
+    *   Explore the tomb and its gardens.
+*   **1:00 PM:** Lunch at a restaurant near Humayun's Tomb.
+    *   *Food Cost:* ₹500.
+*   **2:00 PM:** Travel to Lotus Temple.
+    *   *Transportation Cost:* ₹150 (Uber/Ola).
+    *   *Entry Fee:* Free.
+    *   Experience the tranquility of the temple.
+*   **3:30 PM:** Visit Dilli Haat.
+    *   *Transportation Cost:* ₹200 (Uber/Ola).
+    *   *Entry Fee:* ₹30.
+    *   Shop for handicrafts, sample food from different states, and enjoy cultural performances.
+    *   *Shopping/Snacks:* ₹500.
+*   **6:00 PM:** Head to Hauz Khas Village.
+    *   *Transportation Cost:* ₹250 (Uber/Ola).
+    *   Explore the ruins, cafes, and boutiques.
+*   **7:30 PM:** Dinner at a cafe in Hauz Khas Village.
+    *   *Food Cost:* ₹1000.
+*   **9:00 PM:** Depart from Delhi.
+    *   Take an Uber/Ola to the airport.
+    *   *Transportation Cost:* ₹400-₹600 (Uber/Ola).
 
-**Day 1: April 9 (Wednesday) - Arrival & Hollywood Exploration**
+## Daily Travel Plan
 
-*   **Morning (8:00 AM):** Arrive at Los Angeles International Airport (LAX).
-    *   **Activity:** Clear immigration and customs.
-    *   **Time Allocation:** 2 hours
-    *   **Expenses:** N/A
-*   **Morning (10:00 AM):** Pick up rental car (if chosen) or take ride-sharing to accommodation.
-    *   **Activity:** Get to Airbnb/VRBO in Hollywood. Check-in.
-    *   **Time Allocation:** 1.5 hours (including travel)
-    *   **Expenses:** Transportation ($50-$75), Rental Car ( ~$75/day if chosen).
-*   **Afternoon (11:30 AM):** Lunch in Hollywood.
-    *   **Activity:** Grab a quick and casual lunch.
-    *   **Time Allocation:** 1 hour
-    *   **Expenses:** $15-25 per person.
-*   **Afternoon (12:30 PM):** Hollywood Walk of Fame & TCL Chinese Theatre.
-    *   **Activity:** Explore the Walk of Fame, take photos at the TCL Chinese Theatre.
-    *   **Time Allocation:** 2 hours
-    *   **Expenses:** Souvenirs (optional).
-*   **Late Afternoon (2:30 PM):** Griffith Observatory.
-    *   **Activity:** Drive to Griffith Observatory, enjoy panoramic views.
-    *   **Time Allocation:** 3 hours (including travel)
-    *   **Expenses:** Parking ($10), Planetarium show (optional, ~$15 per person).
-*   **Evening (5:30 PM):** Dinner in Hollywood.
-    *   **Activity:** Casual Dinner.
-    *   **Time Allocation:** 1.5 hours
-    *   **Expenses:** $25-$40 per person
-*   **Evening (7:00 PM):** Relax at the accommodation or explore Hollywood nightlife (optional).
-    *   **Activity:** Unwind, plan for the next day or check out a local bar.
-    *   **Time Allocation:** Rest of the Evening.
-    *   **Expenses:** Drinks (optional).
+### Day 1: April 6, 2025
 
-**Day 2: April 10 (Thursday) - Theme Park Fun!**
+*   **Morning:** Arrival, check-in, India Gate.
+*   **Afternoon:** Red Fort, Jama Masjid, Chandni Chowk.
+*   **Evening:** Sitar concert, dinner.
 
-*   **Morning (9:00 AM):** Universal Studios Hollywood.
-    *   **Activity:** Full day at Universal Studios.
-    *   **Time Allocation:** Full Day (9 AM - 7 PM)
-    *   **Expenses:** Tickets ($120-$150 per person), Food/Drinks inside the park ($50 per person), Parking ($30).
-*   **Evening (7:00 PM):** Dinner near Universal Studios or back in Hollywood.
-    *   **Activity:** Dinner after a long day at the park.
-    *   **Time Allocation:** 1.5 hours
-    *   **Expenses:** $25-$40 per person
-*   **Evening (8:30 PM):** Relax or optional evening activity (e.g., see a movie).
+### Day 2: April 7, 2025
 
-**Day 3: April 11 (Friday) - Beach Vibes & Trendy Streets**
+*   **Morning:** Qutub Minar, Humayun's Tomb.
+*   **Afternoon:** Lotus Temple, Dilli Haat.
+*   **Evening:** Hauz Khas Village, Departure.
 
-*   **Morning (10:00 AM):** Santa Monica Pier & Beach.
-    *   **Activity:** Drive to Santa Monica, explore the pier, enjoy the beach.
-    *   **Time Allocation:** 3 hours
-    *   **Expenses:** Parking ($15), Ride/Games on the pier ($20-$30 per person).
-*   **Afternoon (1:00 PM):** Lunch in Santa Monica.
-    *   **Activity:** Enjoy lunch with a beach view.
-    *   **Time Allocation:** 1.5 hours
-    *   **Expenses:** $20-$35 per person.
-*   **Afternoon (2:30 PM):** Abbot Kinney Boulevard, Venice.
-    *   **Activity:** Explore the trendy shops and art galleries.
-    *   **Time Allocation:** 3 hours.
-    *   **Expenses:** Shopping (optional).
-*   **Evening (5:30 PM):** Dinner in Venice.
-    *   **Activity:** Dinner at a restaurant on Abbot Kinney.
-    *   **Time Allocation:** 1.5 hours
-    *   **Expenses:** $30-$50 per person
-*   **Evening (7:00 PM):** Sunset at Venice Beach followed by drinks at a local bar.
-    *   **Activity:** Enjoy the sunset and nightlife.
-    *   **Time Allocation:** Rest of the Evening.
-    *   **Expenses:** Drinks ($20-40 per person).
+## Expenses
 
-**Day 4: April 12 (Saturday) - Culture & Downtown LA**
+### Accommodation
 
-*   **Morning (10:00 AM):** The Broad Museum.
-    *   **Activity:** Visit the contemporary art museum.
-    *   **Time Allocation:** 2.5 hours
-    *   **Expenses:** Free (reservations recommended). Parking ($15-$20).
-*   **Afternoon (12:30 PM):** Lunch in Downtown LA.
-    *   **Activity:** Lunch near The Broad.
-    *   **Time Allocation:** 1.5 hours
-    *   **Expenses:** $20-$35 per person
-*   **Afternoon (2:00 PM):** Explore the Arts District.
-    *   **Activity:** Wander through the Arts District, admire the street art.
-    *   **Time Allocation:** 2.5 hours
-    *   **Expenses:** Snacks/Drinks ($10 per person).
-*   **Late Afternoon (4:30 PM):** Sixth Street Viaduct.
-    *   **Activity:** Photo stop.
-    *   **Time Allocation:** 1 hour.
-    *   **Expenses:** N/A
-*   **Evening (5:30 PM):** Rooftop Bar in Downtown LA.
-    *   **Activity:** Drinks with a view.
-    *   **Time Allocation:** 3 hours
-    *   **Expenses:** $30-$60 per person.
-*   **Dinner (8:30 PM):** Dinner at Grand Central Market.
-     * **Activity:** Casual food from a variety of vendors.
-     * **Time Allocation:** 1.5 hours
-     * **Expenses:** $20-$40 per person.
+*   Hostel (1 night): ₹800
 
-**Day 5: April 13 (Sunday) - Departure Day/Optional Activity**
+### Transportation
 
-*   **Morning (9:00 AM):** Optional Activity - Bob Baker Day or Dodgers Game.
-    *   **Activity:** Attend Bob Baker Day (free) or a Dodgers Game (ticket cost varies).
-    *   **Time Allocation:** 3-4 hours
-    *   **Expenses:** Bob Baker Day (Donations optional). Dodgers Game (Tickets: $20-$100+ per person).
-*   **Afternoon (12:00 PM):** Lunch.
-    *   **Activity:** Casual Lunch.
-    *   **Time Allocation:** 1 Hour
-    *   **Expenses:** $15-25 per person.
-*   **Afternoon (1:00 PM):** Head to LAX.
-    *   **Activity:** Return rental car (if applicable) and check in for the flight.
-    *   **Time Allocation:** 3-4 hours.
-    *   **Expenses:** Transportation to LAX ($50-$75).
-*   **Evening (5:00 PM):** Depart from LAX.
+*   Metro: ₹160
+*   Uber/Ola: ₹1700
 
-## Estimated Expenses (Per Person)
+### Food
 
-*   **Accommodation:** $280 ($1400 / 5)
-*   **Transportation:** $200 (flexible, depending on rental car vs. ride-sharing)
-*   **Activities:** $250 (Universal Studios, optional activities)
-*   **Food:** $300
-*   **Total:** $1030 (Excluding flights and visa costs)
+*   Day 1: ₹1800
+*   Day 2: ₹2200
+*   **Total Food:** ₹4000
 
-## Important Notes
+### Attractions
 
-*   **Book in advance:** Accommodation, Universal Studios tickets, and any events.
-*   **Transportation:** Consider the pros and cons of renting a car vs. ride-sharing.
-*   **Flexibility:** This is just a suggested itinerary, feel free to adjust it based on your group's interests.
-*   **Weather:** Pack for mild weather.
-*   **Budget:** This is an estimated budget; actual costs may vary.
-*   **Have Fun!**
-```
+*   Entry Fees: ₹570
+*   Sitar Concert: ₹500 (estimated)
+
+### Shopping/Miscellaneous
+
+*   ₹800
+
+### Total Estimated Expenses
+
+*   ₹800 (Accommodation) + ₹1860 (Transportation) + ₹4000 (Food) + ₹1070 (Attractions) + ₹800 (Shopping) = **₹8530**
+
+## Tips for Solo Travelers
+
+*   **Safety:** Be aware of your surroundings, especially in crowded areas. Use reputable transportation options like the Delhi Metro or ride-sharing apps.
+*   **Connectivity:** Purchase a local SIM card for reliable internet access.
+*   **Hydration:** Carry water at all times due to the hot weather.
+*   **Bargaining:** Bargain when shopping in markets like Chandni Chowk and Dilli Haat.
+*   **Enjoy:** Be open to meeting new people and trying new experiences. Embrace the freedom of solo travel!

@@ -111,11 +111,13 @@ export default function ChatBot() {
         {
           type: "bot",
           content: (
-            <div className="prose max-w-none">
+            <div className="prose max-w-none relative">
+              <div className="absolute top-2 right-2">
+                <DownloadButton content={markdownContent} />
+              </div>
               <CustomMarkdown>{markdownContent}</CustomMarkdown>
             </div>
           ),
-          downloadContent: markdownContent
         },
       ]);
     } catch (error) {
@@ -201,15 +203,18 @@ export default function ChatBot() {
         {
           type: "bot",
           content: (
-            <div className="prose max-w-none">
+            <div className="prose max-w-none relative">
+              <div className="absolute top-2 right-2">
+                <DownloadButton content={markdownContent} />
+              </div>
               <CustomMarkdown>{markdownContent}</CustomMarkdown>
             </div>
           ),
-          downloadContent: markdownContent
         },
         {
           type: "bot",
-          content: "How would you like to refine this itinerary? You can ask me to add specific activities, adjust the budget, or suggest accommodations.",
+          content:
+            "How would you like to refine this itinerary? You can ask me to add specific activities, adjust the budget, or suggest accommodations.",
         },
       ]);
     } catch (error) {
@@ -345,11 +350,10 @@ export default function ChatBot() {
         <div style={{ display: 'none' }}>
           <div ref={targetRef} style={{
             padding: '2rem',
-            backgroundColor: 'white',
-            color: 'black',
+            backgroundColor: '#ffffff',
+            color: '#000000',
             maxWidth: '800px',
-            margin: '0 auto',
-            
+            margin: '0 auto'
           }}>
             <div style={{
               fontFamily: 'system-ui, -apple-system, sans-serif',
@@ -361,7 +365,7 @@ export default function ChatBot() {
         </div>
         <button
           onClick={handleDownload}
-          className="flex items-center px-3 py-1.5 mb-2 text-xs bg-indigo-600  text-white rounded-md hover:bg-indigo-700 transition-colors shadow-sm"
+          className="flex items-center px-3 py-1.5 mb-2 text-xs bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors shadow-sm"
           aria-label="Download itinerary as PDF"
           disabled={loading}
         >
@@ -561,14 +565,18 @@ export default function ChatBot() {
                     : "bg-white border border-gray-200 text-black rounded-tl-none shadow-md"
                 }`}
               >
-                <div className="relative">
-                  {message.type === 'bot' && message.downloadContent && (
-                    <div className="absolute top-2 right-2">
-                      <DownloadButton content={message.downloadContent} />
-                    </div>
-                  )}
-                  {message.content}
-                </div>
+                {typeof message.content === 'string' ? (
+                  message.content
+                ) : (
+                  <div className="relative">
+                    {message.type === 'bot' && (
+                      <div className="absolute top-0 right-0 z-10">
+                        <DownloadButton content={message.content.props.children[1].props.children} />
+                      </div>
+                    )}
+                    {message.content}
+                  </div>
+                )}
               </div>
             </div>
           ))}
