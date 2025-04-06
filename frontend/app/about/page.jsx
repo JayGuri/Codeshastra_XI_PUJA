@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import AuroraBackground from "@/components/AuroraBackground"
+import bg from '../../public/Images/bg.png'
 import { Globe, Map, Users, Sparkles, Compass, Shield, MessageSquare, Zap, ArrowRight } from "lucide-react"
 
 export default function About() {
@@ -43,37 +44,38 @@ export default function About() {
   }, [])
 
   return (
-    <AuroraBackground className="bg-black text-white">
+    <>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <div className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black z-10"></div>
             <Image
-              src="/images/hero-travel.jpg"
+              src={bg}
               alt="Travel destinations collage"
               fill
-              className="object-cover"
+              className="object-cover z-200"
               priority
             />
           </div>
           <div className="container mx-auto px-4 relative z-20 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-              Redefining <span className="text-blue-400">Travel Planning</span>
+            <div className="font-bold bg-blue-300 flex items-center justify-center h-full mb-2 text-md  mx-auto w-max  rounded-full border-2 border-brown-300 px-10">
+              <span className="mr-2 text-2xl ">•</span>Join over 5k+ travellers 
+            </div>
+            <h1 className="text-5xl md:text-8xl tracking-tight font-bold mb-8 text-white">
+              Redefining <span className="text-blue-600">Travel</span> Planning
             </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200 mb-8">
-              We're on a mission to make travel planning seamless, personalized, and intelligent.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            
+            <div className="flex mb-10 flex-wrap justify-center gap-4">
               <Link
                 href="/"
-                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-colors duration-300 flex items-center"
+                className="px-8 py-3 bg-blue-300  hover:bg-blue-700 text-blue-800  rounded-full font-bold transition-colors duration-300 flex items-center"
               >
                 Plan Your Trip <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/community"
-                className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full font-medium transition-colors duration-300 border border-gray-600"
+                className="px-8 py-3 bg-white hover:bg-black/90 hover:text-white text-black rounded-full font-medium transition-colors duration-300 border border-gray-600"
               >
                 Join Community
               </Link>
@@ -81,6 +83,7 @@ export default function About() {
           </div>
         </div>
 
+        <AuroraBackground className="bg-black z-10 text-white">
         {/* Our Mission */}
         <div id="mission" className={`py-20 animate-section ${isVisible.mission ? "animate-fade-in" : "opacity-0"}`}>
           <div className="container mx-auto px-4">
@@ -366,7 +369,7 @@ export default function About() {
             </div>
           </div>
         </div>
-
+</AuroraBackground>
         {/* Call to Action */}
         <div className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
           <div className="container mx-auto px-4 text-center">
@@ -383,7 +386,8 @@ export default function About() {
           </div>
         </div>
       </div>
-    </AuroraBackground>
+    
+    </>
   )
 }
 

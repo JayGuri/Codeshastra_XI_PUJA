@@ -94,7 +94,7 @@ export default function Home() {
         {/* Chatbot overlay - centered in form mode */}
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <div className="pointer-events-auto w-full max-w-md px-4">
-            <ChatBot />
+            <ChatBot /> 
           </div>
         </div>
       </div>
