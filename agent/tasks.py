@@ -102,7 +102,7 @@ def planner_task(context, agent ):
 
        
         """,
-        expected_output="A structured markdown travel itinerary.",
+        expected_output="A well structured markdown formatted travel itinerary.With a title as well",
         context=context,
         agent=agent,
         output_file='travel_plan.md',

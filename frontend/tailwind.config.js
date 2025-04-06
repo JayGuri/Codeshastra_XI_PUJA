@@ -22,8 +22,42 @@ module.exports = {
           950: "#1e1b4b",
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: '#000000',
+            a: {
+              color: '#3182ce',
+              '&:hover': {
+                color: '#2c5282',
+              },
+            },
+            h1: {
+              color: '#000000',
+            },
+            h2: {
+              color: '#000000',
+            },
+            h3: {
+              color: '#000000',
+            },
+            strong: {
+              color: '#000000',
+            },
+            code: {
+              color: '#000000',
+            },
+            blockquote: {
+              color: '#000000',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

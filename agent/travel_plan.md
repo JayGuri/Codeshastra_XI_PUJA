@@ -1,205 +1,150 @@
 ```markdown
-# Goa Family Travel Itinerary: November 25, 2025 - December 4, 2025 (10 Days for Family of 10)
+# Los Angeles Itinerary: Friends Trip (April 9-13, 2025)
 
-This itinerary focuses on the optimal travel period (late November - early December) for pleasant weather and incorporates family-friendly activities and attractions. It also considers the logistics of traveling with a larger group.
+## Travel Information
 
-## Pre-Trip Planning:
+*   **Origin:** Mumbai, India
+*   **Destination:** Los Angeles, USA
+*   **Arrival Date:** 2025-04-09
+*   **Departure Date:** 2025-04-13
+*   **Group Size:** 5 Friends
 
-*   **Flights:** Book round-trip flights from Mumbai to Dabolim Airport (GOI) well in advance. (Estimated cost: INR 30,000 - INR 60,000 per person).
-*   **Accommodation:** Reserve a large villa or multiple suites at a family-friendly resort (e.g., The Leela Goa, Taj Exotica, Park Hyatt) for the entire duration. (Estimated cost: INR 20,000 - INR 50,000 per night).
-*   **Transportation:** Arrange for airport transfers and local transportation (hire a van or multiple taxis).
-*   **Activities:** Pre-book popular tours and activities, especially for a group of 10.
-*   **Essentials:** Pack light cotton clothes, swimwear, sunscreen, hats, sunglasses, insect repellent, and any necessary medications.
-*   **Currency:** Exchange currency to Indian Rupees (INR).
+## Visa Requirements
 
-## Daily Itinerary:
+*   Indian citizens need a US B1/B2 Tourist Visa. Apply well in advance!
+*   Application Fee: ~$185 USD (INR 15,400)
 
-**Day 1: Arrival in Goa & Beach Relaxation (November 25, 2025)**
+## Accommodation Recommendation
 
-*   **Morning (8:00 AM - 12:00 PM):**
-    *   8:00 AM: Depart from Mumbai to Goa by flight (GOI).
-    *   9:00 AM: Arrive at Dabolim Airport (GOI).
-    *   9:30 AM: Transfer to the pre-booked Villa/Resort in North Goa (Calangute/Candolim area).
-    *   10:30 AM: Check-in and freshen up.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a family-friendly restaurant near the resort (INR 3,000 - INR 5,000).
-    *   2:00 PM: Relax and unwind at Calangute Beach. Kids can build sandcastles, swim, and play beach games.
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   6:00 PM: Enjoy sunset views at the beach.
-    *   7:30 PM: Dinner at a beach shack with kid-friendly options (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
+*   **Type:** Airbnb/VRBO - Rent a house for the group.
+*   **Location:** Hollywood/West Hollywood area.
+*   **Estimated Cost:** $350/night (Total: $1400 for 4 nights)
 
-    *Daily Travel Plan:* Flight from Mumbai to Goa, followed by taxi to resort.
-    *Daily Spending:* Flights (variable), Airport Transfer (INR 2,000), Lunch (INR 4,000), Dinner (INR 5,500), Accommodation (INR 20,000-50,000)
-    *Tips:* Book flights and accomodation in advance
+## Daily Itinerary
 
-**Day 2: North Goa Exploration (November 26, 2025)**
+**Day 1: April 9 (Wednesday) - Arrival & Hollywood Exploration**
 
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Visit Fort Aguada, offering panoramic views of the Arabian Sea.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a restaurant near Fort Aguada (INR 3,000 - INR 5,000).
-    *   2:00 PM: Explore Chapora Fort, famous for its scenic views (Dil Chahta Hai Fort).
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   6:00 PM: Enjoy the sunset at Vagator Beach near Chapora Fort.
-    *   7:30 PM: Dinner at a restaurant in Anjuna (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
+*   **Morning (8:00 AM):** Arrive at Los Angeles International Airport (LAX).
+    *   **Activity:** Clear immigration and customs.
+    *   **Time Allocation:** 2 hours
+    *   **Expenses:** N/A
+*   **Morning (10:00 AM):** Pick up rental car (if chosen) or take ride-sharing to accommodation.
+    *   **Activity:** Get to Airbnb/VRBO in Hollywood. Check-in.
+    *   **Time Allocation:** 1.5 hours (including travel)
+    *   **Expenses:** Transportation ($50-$75), Rental Car ( ~$75/day if chosen).
+*   **Afternoon (11:30 AM):** Lunch in Hollywood.
+    *   **Activity:** Grab a quick and casual lunch.
+    *   **Time Allocation:** 1 hour
+    *   **Expenses:** $15-25 per person.
+*   **Afternoon (12:30 PM):** Hollywood Walk of Fame & TCL Chinese Theatre.
+    *   **Activity:** Explore the Walk of Fame, take photos at the TCL Chinese Theatre.
+    *   **Time Allocation:** 2 hours
+    *   **Expenses:** Souvenirs (optional).
+*   **Late Afternoon (2:30 PM):** Griffith Observatory.
+    *   **Activity:** Drive to Griffith Observatory, enjoy panoramic views.
+    *   **Time Allocation:** 3 hours (including travel)
+    *   **Expenses:** Parking ($10), Planetarium show (optional, ~$15 per person).
+*   **Evening (5:30 PM):** Dinner in Hollywood.
+    *   **Activity:** Casual Dinner.
+    *   **Time Allocation:** 1.5 hours
+    *   **Expenses:** $25-$40 per person
+*   **Evening (7:00 PM):** Relax at the accommodation or explore Hollywood nightlife (optional).
+    *   **Activity:** Unwind, plan for the next day or check out a local bar.
+    *   **Time Allocation:** Rest of the Evening.
+    *   **Expenses:** Drinks (optional).
 
-    *Daily Travel Plan:* Taxi from resort to Fort Aguada, then to Chapora Fort, and back to resort.
-    *Daily Spending:* Breakfast (Included), Taxi (INR 3,000), Lunch (INR 4,000), Dinner (INR 5,500), Fort Entrance (Free)
-    *Tips:* Wear comfortable shoes for walking at the forts
+**Day 2: April 10 (Thursday) - Theme Park Fun!**
 
-**Day 3: Anjuna Flea Market & Beach Fun (November 27, 2025 - Wednesday)**
+*   **Morning (9:00 AM):** Universal Studios Hollywood.
+    *   **Activity:** Full day at Universal Studios.
+    *   **Time Allocation:** Full Day (9 AM - 7 PM)
+    *   **Expenses:** Tickets ($120-$150 per person), Food/Drinks inside the park ($50 per person), Parking ($30).
+*   **Evening (7:00 PM):** Dinner near Universal Studios or back in Hollywood.
+    *   **Activity:** Dinner after a long day at the park.
+    *   **Time Allocation:** 1.5 hours
+    *   **Expenses:** $25-$40 per person
+*   **Evening (8:30 PM):** Relax or optional evening activity (e.g., see a movie).
 
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Visit Anjuna Flea Market (Wednesday Market). Shop for souvenirs, handicrafts, and clothing.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   1:00 PM: Lunch at a cafe near Anjuna Beach (INR 3,000 - INR 5,000).
-    *   2:30 PM: Relax and enjoy water sports at Anjuna Beach (banana boat rides, jet skiing for older kids/adults) (INR 800 - INR 2,000 per activity per person).
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   6:30 PM: Enjoy the sunset at Anjuna Beach.
-    *   7:30 PM: Dinner at a restaurant in Anjuna (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
+**Day 3: April 11 (Friday) - Beach Vibes & Trendy Streets**
 
-    *Daily Travel Plan:* Taxi from resort to Anjuna Flea Market and Beach, then back to resort.
-    *Daily Spending:* Breakfast (Included), Taxi (INR 2,500), Lunch (INR 4,000), Water Sports (INR 8,000 - INR 20,000), Dinner (INR 5,500)
-    *Tips:* Bargain hard at the flea market, supervise children closely
+*   **Morning (10:00 AM):** Santa Monica Pier & Beach.
+    *   **Activity:** Drive to Santa Monica, explore the pier, enjoy the beach.
+    *   **Time Allocation:** 3 hours
+    *   **Expenses:** Parking ($15), Ride/Games on the pier ($20-$30 per person).
+*   **Afternoon (1:00 PM):** Lunch in Santa Monica.
+    *   **Activity:** Enjoy lunch with a beach view.
+    *   **Time Allocation:** 1.5 hours
+    *   **Expenses:** $20-$35 per person.
+*   **Afternoon (2:30 PM):** Abbot Kinney Boulevard, Venice.
+    *   **Activity:** Explore the trendy shops and art galleries.
+    *   **Time Allocation:** 3 hours.
+    *   **Expenses:** Shopping (optional).
+*   **Evening (5:30 PM):** Dinner in Venice.
+    *   **Activity:** Dinner at a restaurant on Abbot Kinney.
+    *   **Time Allocation:** 1.5 hours
+    *   **Expenses:** $30-$50 per person
+*   **Evening (7:00 PM):** Sunset at Venice Beach followed by drinks at a local bar.
+    *   **Activity:** Enjoy the sunset and nightlife.
+    *   **Time Allocation:** Rest of the Evening.
+    *   **Expenses:** Drinks ($20-40 per person).
 
-**Day 4: Dudhsagar Falls Adventure (November 28, 2025)**
+**Day 4: April 12 (Saturday) - Culture & Downtown LA**
 
-*   **Morning (7:00 AM - 12:00 PM):**
-    *   7:00 AM: Early breakfast at the Villa/Resort.
-    *   8:00 AM: Depart for Dudhsagar Falls (requires a jeep safari from Collem).
-    *   10:00 AM: Arrive at Collem and begin the jeep safari to Dudhsagar Falls.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Enjoy the Dudhsagar Falls and swim in the natural pools.
-    *   2:00 PM: Lunch (packed lunch or available at Collem) (INR 3,000 - INR 5,000).
-    *   3:00 PM: Return jeep safari from Dudhsagar Falls to Collem.
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   5:00 PM: Depart from Collem back to the Villa/Resort.
-    *   7:30 PM: Dinner at a restaurant near the resort (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
+*   **Morning (10:00 AM):** The Broad Museum.
+    *   **Activity:** Visit the contemporary art museum.
+    *   **Time Allocation:** 2.5 hours
+    *   **Expenses:** Free (reservations recommended). Parking ($15-$20).
+*   **Afternoon (12:30 PM):** Lunch in Downtown LA.
+    *   **Activity:** Lunch near The Broad.
+    *   **Time Allocation:** 1.5 hours
+    *   **Expenses:** $20-$35 per person
+*   **Afternoon (2:00 PM):** Explore the Arts District.
+    *   **Activity:** Wander through the Arts District, admire the street art.
+    *   **Time Allocation:** 2.5 hours
+    *   **Expenses:** Snacks/Drinks ($10 per person).
+*   **Late Afternoon (4:30 PM):** Sixth Street Viaduct.
+    *   **Activity:** Photo stop.
+    *   **Time Allocation:** 1 hour.
+    *   **Expenses:** N/A
+*   **Evening (5:30 PM):** Rooftop Bar in Downtown LA.
+    *   **Activity:** Drinks with a view.
+    *   **Time Allocation:** 3 hours
+    *   **Expenses:** $30-$60 per person.
+*   **Dinner (8:30 PM):** Dinner at Grand Central Market.
+     * **Activity:** Casual food from a variety of vendors.
+     * **Time Allocation:** 1.5 hours
+     * **Expenses:** $20-$40 per person.
 
-    *Daily Travel Plan:* Long taxi ride to Collem, Jeep Safari to Dudhsagar Falls, return taxi to resort.
-    *Daily Spending:* Breakfast (Included), Taxi (INR 5,000), Jeep Safari (INR 5,000), Park Entry (INR 500), Lunch (INR 4,000), Dinner (INR 5,500)
-    *Tips:* Wear comfortable walking shoes, carry swimwear and towels
+**Day 5: April 13 (Sunday) - Departure Day/Optional Activity**
 
-**Day 5: Old Goa & Spice Plantation (November 29, 2025)**
+*   **Morning (9:00 AM):** Optional Activity - Bob Baker Day or Dodgers Game.
+    *   **Activity:** Attend Bob Baker Day (free) or a Dodgers Game (ticket cost varies).
+    *   **Time Allocation:** 3-4 hours
+    *   **Expenses:** Bob Baker Day (Donations optional). Dodgers Game (Tickets: $20-$100+ per person).
+*   **Afternoon (12:00 PM):** Lunch.
+    *   **Activity:** Casual Lunch.
+    *   **Time Allocation:** 1 Hour
+    *   **Expenses:** $15-25 per person.
+*   **Afternoon (1:00 PM):** Head to LAX.
+    *   **Activity:** Return rental car (if applicable) and check in for the flight.
+    *   **Time Allocation:** 3-4 hours.
+    *   **Expenses:** Transportation to LAX ($50-$75).
+*   **Evening (5:00 PM):** Depart from LAX.
 
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Visit Basilica of Bom Jesus (Old Goa), a UNESCO World Heritage Site.
-    *   11:00 AM: Explore Se Cathedral, one of the largest churches in Asia.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a restaurant near Old Goa (INR 3,000 - INR 5,000).
-    *   2:00 PM: Visit a Spice Plantation (e.g., Sahakari Spice Farm). Enjoy a guided tour and learn about local spices.
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   6:00 PM: Enjoy a traditional Goan meal at the Spice Plantation.
-    *   7:30 PM: Depart from the Spice Plantation back to the Villa/Resort.
-    *   9:00 PM: Return to the Villa/Resort for the night.
+## Estimated Expenses (Per Person)
 
-    *Daily Travel Plan:* Taxi to Old Goa, then to Spice Plantation, and back to resort.
-    *Daily Spending:* Breakfast (Included), Taxi (INR 4,000), Lunch (INR 4,000), Spice Plantation Tour & Meal (INR 7,000), Dinner (Included at Spice Plantation)
-    *Tips:* Learn about local spices, enjoy Goan meal
+*   **Accommodation:** $280 ($1400 / 5)
+*   **Transportation:** $200 (flexible, depending on rental car vs. ride-sharing)
+*   **Activities:** $250 (Universal Studios, optional activities)
+*   **Food:** $300
+*   **Total:** $1030 (Excluding flights and visa costs)
 
-**Day 6: Relaxing Day & Water Sports (November 30, 2025)**
+## Important Notes
 
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Relax by the pool or beach.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a restaurant near the resort (INR 3,000 - INR 5,000).
-    *   2:00 PM: Water sports at Calangute/Baga Beach (banana boat rides, parasailing, jet skiing).
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   6:00 PM: Enjoy the sunset at the beach.
-    *   7:30 PM: Dinner at a beach shack (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
-
-    *Daily Travel Plan:* Relax at resort and nearby beach
-    *Daily Spending:* Breakfast (Included), Lunch (INR 4,000), Water Sports (INR 8,000 - INR 20,000), Dinner (INR 5,500)
-    *Tips:* Wear comfortable swimwear
-
-**Day 7: South Goa Exploration (December 1, 2025)**
-
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Visit Agonda Beach, a tranquil and scenic beach ideal for relaxation.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a restaurant near Agonda Beach (INR 3,000 - INR 5,000).
-    *   2:00 PM: Visit Palolem Beach.
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   6:00 PM: Enjoy sunset views at Palolem Beach.
-    *   7:30 PM: Dinner at a restaurant in Palolem (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
-
-    *Daily Travel Plan:* Taxi to Agonda and Palolem Beach
-    *Daily Spending:* Breakfast (Included), Taxi (INR 5,000), Lunch (INR 4,000), Dinner (INR 5,500)
-    *Tips:* Explore South Goa
-
-**Day 8: Chorao Island (Salim Ali Bird Sanctuary) (December 2, 2025)**
-
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Visit Chorao Island (Salim Ali Bird Sanctuary). Take a ferry to the island.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a restaurant on Chorao Island (INR 3,000 - INR 5,000).
-    *   2:00 PM: Explore the Salim Ali Bird Sanctuary (hire a guide for a more informative experience).
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   5:00 PM: Take a ferry back from Chorao Island.
-    *   6:00 PM: Dinner at a restaurant near the resort (INR 4,000 - INR 7,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
-
-   *Daily Travel Plan:* Taxi to ferry, ferry to Chorao Island and Bird Sanctuary
-    *Daily Spending:* Breakfast (Included), Taxi (INR 3,000), Ferry (INR 200), Bird Sanctuary Entry (INR 500), Guide (INR 1,500), Lunch (INR 4,000), Dinner (INR 5,500)
-    *Tips:* Hire guide for Bird Sanctuary
-
-**Day 9: Free Day & Shopping (December 3, 2025)**
-
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Relax by the pool or beach.
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   12:30 PM: Lunch at a restaurant near the resort (INR 3,000 - INR 5,000).
-    *   2:00 PM: Shopping for souvenirs and gifts at local markets (Mapusa Market).
-*   **Evening (5:00 PM - 10:00 PM):**
-    *   7:30 PM: Farewell dinner at a nice restaurant in Goa (INR 6,000 - INR 10,000).
-    *   9:00 PM: Return to the Villa/Resort for the night.
-
-    *Daily Travel Plan:* Relax by the beach or pool, visit local market
-    *Daily Spending:* Breakfast (Included), Lunch (INR 4,000), Shopping (INR 5,000), Farewell Dinner (INR 8,000)
-    *Tips:* Relax
-
-**Day 10: Departure (December 4, 2025)**
-
-*   **Morning (9:00 AM - 12:00 PM):**
-    *   9:00 AM: Breakfast at the Villa/Resort.
-    *   10:00 AM: Check out from the Villa/Resort.
-    *   11:00 AM: Transfer to Dabolim Airport (GOI).
-*   **Afternoon (12:00 PM - 5:00 PM):**
-    *   1:00 PM: Depart from Goa to Mumbai by flight.
-
-    *Daily Travel Plan:* Transfer to Airport
-    *Daily Spending:* Breakfast (Included), Airport Transfer (INR 2,000), Flights (variable)
-    *Tips:* Pack and check out properly
-
-## Estimated Total Costs (for Family of 10):
-
-*   **Flights (Mumbai-Goa-Mumbai):** INR 300,000 - INR 600,000
-*   **Accommodation (9 nights):** INR 180,000 - INR 450,000
-*   **Food (10 days):** INR 40,000 - INR 70,000
-*   **Transportation (Local):** INR 30,000 - INR 50,000
-*   **Activities & Entrance Fees:** INR 20,000 - INR 40,000
-*   **Miscellaneous:** INR 20,000 - INR 40,000
-
-**Total Estimated Trip Cost:** INR 590,000 - INR 1,250,000
-
-## Additional Tips:
-
-*   **Health & Safety:** Consult a doctor about necessary vaccinations and medications. Carry a basic first-aid kit. Be aware of your surroundings, especially at night.
-*   **Communication:** Purchase a local SIM card for easy communication.
-*   **Bargaining:** Bargain at flea markets and with taxi drivers.
-*   **Flexibility:** Be prepared to adjust the itinerary based on weather conditions and family preferences.
-
+*   **Book in advance:** Accommodation, Universal Studios tickets, and any events.
+*   **Transportation:** Consider the pros and cons of renting a car vs. ride-sharing.
+*   **Flexibility:** This is just a suggested itinerary, feel free to adjust it based on your group's interests.
+*   **Weather:** Pack for mild weather.
+*   **Budget:** This is an estimated budget; actual costs may vary.
+*   **Have Fun!**
 ```

@@ -47,11 +47,7 @@ export default function Home() {
   return (
     <main className="w-full h-screen overflow-hidden flex flex-col">
       {/* Navbar */}
-      <header className="bg-gray-900 text-white p-4">
-        <div className="container mx-auto">
-          <h1 className="text-2xl font-bold">My Navbar</h1>
-        </div>
-      </header>
+      
 
       {/* Tab navigation positioned below the navbar
       <div className="bg-gray-800 text-white p-2 z-20">

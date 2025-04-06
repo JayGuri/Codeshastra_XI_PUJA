@@ -12,6 +12,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import { usePDF } from 'react-to-pdf';
 
 export default function ChatBot() {
   const [formMode, setFormMode] = useState(true);
@@ -108,10 +111,11 @@ export default function ChatBot() {
         {
           type: "bot",
           content: (
-            <div className="prose prose-invert max-w-none">
-              <ReactMarkdown>{markdownContent}</ReactMarkdown>
+            <div className="prose max-w-none">
+              <CustomMarkdown>{markdownContent}</CustomMarkdown>
             </div>
           ),
+          downloadContent: markdownContent
         },
       ]);
     } catch (error) {
@@ -143,9 +147,9 @@ export default function ChatBot() {
   const formatDate = (dateString) => {
     if (!dateString) return "";
 
-    // Convert from yyyy-mm-dd to dd/mm/yyyy
+    // Convert from yyyy-mm-dd to mm-dd-yyyy
     const [year, month, day] = dateString.split("-");
-    return `${day}-${month}-${year}`;
+    return `${month}-${day}-${year}`;
   };
 
   const handleFormSubmit = async (e) => {
@@ -197,15 +201,15 @@ export default function ChatBot() {
         {
           type: "bot",
           content: (
-            <div className="prose prose-invert max-w-none">
-              <ReactMarkdown>{markdownContent}</ReactMarkdown>
+            <div className="prose max-w-none">
+              <CustomMarkdown>{markdownContent}</CustomMarkdown>
             </div>
           ),
+          downloadContent: markdownContent
         },
         {
           type: "bot",
-          content:
-            "How would you like to refine this itinerary? You can ask me to add specific activities, adjust the budget, or suggest accommodations.",
+          content: "How would you like to refine this itinerary? You can ask me to add specific activities, adjust the budget, or suggest accommodations.",
         },
       ]);
     } catch (error) {
@@ -265,12 +269,126 @@ export default function ChatBot() {
     },
   ];
 
+  // Add this custom component for markdown rendering
+  const CustomMarkdown = ({ children }) => {
+    return (
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+        components={{
+          // Customize heading styles
+          h1: ({ node, ...props }) => <h1 className="text-2xl font-bold mt-6 mb-4 text-black/90" {...props} />,
+          h2: ({ node, ...props }) => <h2 className="text-xl font-bold mt-5 mb-3 text-black/80" {...props} />,
+          h3: ({ node, ...props }) => <h3 className="text-lg font-semibold mt-4 mb-2 text-black/70" {...props} />,
+          
+          // Customize paragraph and list styles
+          p: ({ node, ...props }) => <p className="my-3 leading-relaxed" {...props} />,
+          ul: ({ node, ...props }) => <ul className="list-disc list-inside my-3 space-y-1" {...props} />,
+          ol: ({ node, ...props }) => <ol className="list-decimal list-inside my-3 space-y-1" {...props} />,
+          
+          // Customize table styles
+          table: ({ node, ...props }) => (
+            <div className="overflow-x-auto my-4">
+              <table className="min-w-full divide-y divide-gray-300" {...props} />
+            </div>
+          ),
+          thead: ({ node, ...props }) => <thead className="bg-gray-100" {...props} />,
+          th: ({ node, ...props }) => (
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900" {...props} />
+          ),
+          td: ({ node, ...props }) => (
+            <td className="px-4 py-3 text-sm border-t border-gray-200" {...props} />
+          ),
+          
+          // Style blockquotes
+          blockquote: ({ node, ...props }) => (
+            <blockquote className="border-l-4 border-gray-300 pl-4 my-4 italic" {...props} />
+          ),
+          
+          // Style code blocks and inline code
+          code: ({ node, inline, ...props }) => (
+            inline ? 
+              <code className="bg-gray-100 rounded px-1 py-0.5 text-sm" {...props} /> :
+              <code className="block bg-gray-100 rounded-lg p-4 my-4 text-sm overflow-x-auto" {...props} />
+          ),
+          
+          // Style horizontal rules
+          hr: ({ node, ...props }) => <hr className="my-6 border-gray-300" {...props} />,
+          
+          // Add spacing between list items
+          li: ({ node, ...props }) => <li className="my-1" {...props} />,
+        }}
+      >
+        {children}
+      </ReactMarkdown>
+    );
+  };
+
+  // Update the DownloadButton component
+  const DownloadButton = ({ content }) => {
+    const { toPDF, targetRef, loading } = usePDF({
+      filename: 'travel-itinerary.pdf',
+      page: { margin: 20 }
+    });
+  
+    const handleDownload = async () => {
+      try {
+        await toPDF();
+      } catch (error) {
+        console.error('Failed to generate PDF:', error);
+        // Show error message to user
+      }
+    };
+  
+    return (
+      <>
+        <div style={{ display: 'none' }}>
+          <div ref={targetRef} style={{
+            padding: '2rem',
+            backgroundColor: 'white',
+            color: 'black',
+            maxWidth: '800px',
+            margin: '0 auto',
+            
+          }}>
+            <div style={{
+              fontFamily: 'system-ui, -apple-system, sans-serif',
+              lineHeight: '1.5'
+            }}>
+              <CustomMarkdown>{content}</CustomMarkdown>
+            </div>
+          </div>
+        </div>
+        <button
+          onClick={handleDownload}
+          className="flex items-center px-3 py-1.5 mb-2 text-xs bg-indigo-600  text-white rounded-md hover:bg-indigo-700 transition-colors shadow-sm"
+          aria-label="Download itinerary as PDF"
+          disabled={loading}
+        >
+          <svg
+            className="w-4 h-4 mr-1.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            />
+          </svg>
+          {loading ? 'Generating...' : 'Download PDF'}
+        </button>
+      </>
+    );
+  };
   return (
     <motion.div
     ref={chatbotRef}
-    className={`flex flex-col bg-white shadow-xl overflow-hidden border-l border-gray-700/30 transition-all duration-500 ${
+    className={`flex mb-10 flex-col bg-white text-black/90 shadow-xl overflow-hidden border-l border-gray-700/30 transition-all duration-500 ${
       formMode
-        ? "w-full h-full rounded-none"
+        ? "w-full h-full rounded-lg"
         : "w-[40%] h-screen fixed right-0 top-0 z-50 rounded-none"
     }`}
     initial={formMode ? { opacity: 1 } : { x: "100%" }}
@@ -286,7 +404,7 @@ export default function ChatBot() {
         </h3>
       </div>
       {formMode && (
-        <div className="text-xs text-white/80 flex items-center">
+        <div className="text-xs text-black/90 flex items-center">
           <MessageSquare className="w-3 h-3 mr-1" />
           Fill in your travel details
         </div>
@@ -295,11 +413,11 @@ export default function ChatBot() {
 
     {formMode ? (
       /* Form Interface */
-      <div className="flex-1 p-6 overflow-y-auto bg-gray-900 space-y-5">
+      <div className="flex-1 p-6 overflow-y-auto bg-white rounded-lg text-black/90  space-y-5">
         <form onSubmit={handleFormSubmit} className="space-y-5">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium  mb-2">
                 From
               </label>
               <input
@@ -307,12 +425,12 @@ export default function ChatBot() {
                 value={fromCity}
                 onChange={(e) => setFromCity(e.target.value)}
                 placeholder="Starting city"
-                className="w-full px-4 py-3 text-sm border border-gray-700 rounded-lg bg-gray-800/80 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-3 text-sm   rounded-lg bg-gray-200/80 text-black/90 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-black/90 mb-2">
                 To
               </label>
               <input
@@ -320,7 +438,7 @@ export default function ChatBot() {
                 value={destinationCity}
                 onChange={(e) => setDestinationCity(e.target.value)}
                 placeholder="Destination city"
-                className="w-full px-4 py-3 text-sm border border-gray-700 rounded-lg bg-gray-800/80 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-3 text-sm   rounded-lg bg-gray-200/80 text-black/90 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 required
               />
             </div>
@@ -328,7 +446,7 @@ export default function ChatBot() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-black/90 mb-2">
                 People
               </label>
               <input
@@ -337,25 +455,23 @@ export default function ChatBot() {
                 value={people}
                 onChange={(e) => setPeople(e.target.value)}
                 placeholder="Number of travelers"
-                className="w-full px-4 py-3 text-sm border border-gray-700 rounded-lg bg-gray-800/80 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-3 text-sm   rounded-lg bg-gray-200/80 text-black/90 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-black/90 mb-2">
                 Budget (₹)
               </label>
               <div className="relative">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
-                  <IndianRupee className="w-4 h-4" />
-                </span>
+                
                 <input
                   type="number"
                   min="1000"
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
                   placeholder="Your total budget"
-                  className="w-full pl-10 pr-4 py-3 text-sm border border-gray-700 rounded-lg bg-gray-800/80 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full px-4 py-3 text-sm   rounded-lg bg-gray-200/80 text-black/90 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -363,7 +479,7 @@ export default function ChatBot() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-black/90 mb-2">
               Interests
             </label>
             <input
@@ -371,7 +487,7 @@ export default function ChatBot() {
               value={interests}
               onChange={(e) => setInterests(e.target.value)}
               placeholder="e.g., Adventure, Culture, Food, Relaxation"
-              className="w-full px-4 py-3 text-sm border border-gray-700 rounded-lg bg-gray-800/80 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="w-full px-4 py-3 text-sm   rounded-lg bg-gray-200/80 text-black/90 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               required
             />
           </div>
@@ -380,7 +496,7 @@ export default function ChatBot() {
             <button
               type="button"
               onClick={() => setShowDateModal(true)}
-              className="flex-1 flex items-center justify-center px-4 py-3 bg-gray-700/70 text-white rounded-lg text-sm hover:bg-gray-600/70 transition-colors shadow-lg"
+              className="flex-1 flex items-center justify-center px-4 py-3 bg-gray-200/80 text-black/90 rounded-lg text-sm hover:bg-gray-700/70 hover:text-white transition-colors "
             >
               <Calendar className="w-4 h-4 mr-2" />
               {startDate && endDate
@@ -393,7 +509,7 @@ export default function ChatBot() {
             <button
               type="button"
               onClick={() => setShowTravelTypeModal(true)}
-              className="flex-1 flex items-center justify-center px-4 py-3 bg-gray-700/70 text-white rounded-lg text-sm hover:bg-gray-600/70 transition-colors shadow-lg"
+              className="flex-1 flex items-center justify-center px-4 py-3 bg-gray-200/80 text-black/90 rounded-lg text-sm hover:bg-gray-700/70 hover:text-white transition-colors "
             >
               <Heart className="w-4 h-4 mr-2" />
               {relationship
@@ -404,7 +520,7 @@ export default function ChatBot() {
             <button
               type="button"
               onClick={() => setShowBudgetModal(true)}
-              className="flex-1 flex items-center justify-center px-4 py-3 bg-gray-700/70 text-white rounded-lg text-sm hover:bg-gray-600/70 transition-colors shadow-lg"
+              className="flex-1 flex items-center justify-center px-4 py-3 bg-gray-200/80 text-black/90 rounded-lg text-sm hover:bg-gray-700/70 hover:text-white transition-colors "
             >
               <IndianRupee className="w-4 h-4 mr-2" />
               {luxury
@@ -416,7 +532,7 @@ export default function ChatBot() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center shadow-lg"
+            className="w-full bg-black   text-white font-medium py-3 px-4 hover:bg-transparent hover:text-black hover:border-1 hover:border-black rounded-full transition-colors duration-300 flex items-center justify-center shadow-lg"
           >
             {isLoading ? (
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
@@ -430,7 +546,7 @@ export default function ChatBot() {
     ) : (
       /* Chat Interface */
       <>
-        <div className="flex-1 p-5  overflow-y-auto bg-white">
+        <div className="flex-1 p-5 overflow-y-auto bg-white">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -442,10 +558,17 @@ export default function ChatBot() {
                 className={`inline-block px-5 py-3 rounded-xl max-w-[90%] text-base ${
                   message.type === 'user'
                     ? "bg-gray-200 text-black rounded-tr-none shadow-md"
-                    : "bg-white text-black rounded-tl-none shadow-md"
+                    : "bg-white border border-gray-200 text-black rounded-tl-none shadow-md"
                 }`}
               >
-                {message.content}
+                <div className="relative">
+                  {message.type === 'bot' && message.downloadContent && (
+                    <div className="absolute top-2 right-2">
+                      <DownloadButton content={message.downloadContent} />
+                    </div>
+                  )}
+                  {message.content}
+                </div>
               </div>
             </div>
           ))}
@@ -562,7 +685,7 @@ export default function ChatBot() {
 
     {/* Travel Type Modal */}
     {showTravelTypeModal && (
-      <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm">
+      <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray/70 backdrop-blur-sm">
         <div
           className="bg-gray-900 p-6 rounded-xl w-[90%] max-w-sm border border-gray-800 text-white shadow-2xl"
           onClick={(e) => e.stopPropagation()}
@@ -597,20 +720,7 @@ export default function ChatBot() {
                 </p>
               </div>
             ))}
-            <div className="flex items-center p-2">
-              <input
-                type="radio"
-                id="group"
-                name="travelType"
-                value="group"
-                checked={relationship === "group"}
-                onChange={() => setRelationship("group")}
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500"
-              />
-              <label htmlFor="group" className="ml-3 block text-sm text-gray-300 capitalize">
-                Group (&gt;10)
-              </label>
-            </div>
+           
           </div>
 
           <div className="flex justify-end space-x-3 mt-4">

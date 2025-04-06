@@ -25,8 +25,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/80" : "bg-black/40"
+      className={` w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-black/80" : "bg-black"
       } backdrop-blur-lg border-b border-white/10`}
     >
       <div className="container mx-auto px-4">
