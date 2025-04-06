@@ -3,29 +3,28 @@
 import { useEffect, useRef } from "react"
 import { getRouteCoordinates } from "../utils/routingService"
 
-export default function CesiumGlobe() {
+export default function CesiumGlobe({ sourceLat, sourceLng, destLat, destLng }) {
   const containerRef = useRef(null)
   const viewerRef = useRef(null)
 
-  const addPinsAndPath = async (viewer, Cesium) => {
-    const mumbaiLat = 19.0760
-    const mumbaiLng = 72.8777
-    const puneLat = 18.5204
-    const puneLng = 73.8567
+  const addPinsAndRoute = async (viewer, Cesium) => {
+    if (!sourceLat || !sourceLng || !destLat || !destLng) {
+      return;
+    }
 
-    const mumbaiPosition = Cesium.Cartesian3.fromDegrees(mumbaiLng, mumbaiLat, 100)
-    const punePosition = Cesium.Cartesian3.fromDegrees(puneLng, puneLat, 100)
+    // Clear existing entities
+    viewer.entities.removeAll();
 
-    // Add Mumbai pin
+    // Add source pin
     viewer.entities.add({
-      position: mumbaiPosition,
+      position: Cesium.Cartesian3.fromDegrees(sourceLng, sourceLat, 100),
       billboard: {
-        image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InJlZCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+',
+        image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9ImdyZWVuIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=',
         verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
         scale: 0.5,
       },
       label: {
-        text: 'Mumbai',
+        text: 'Source',
         font: '14pt sans-serif',
         style: Cesium.LabelStyle.FILL_AND_OUTLINE,
         outlineWidth: 2,
@@ -34,16 +33,16 @@ export default function CesiumGlobe() {
       },
     })
 
-    // Add Pune pin
+    // Add destination pin
     viewer.entities.add({
-      position: punePosition,
+      position: Cesium.Cartesian3.fromDegrees(destLng, destLat, 100),
       billboard: {
         image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InJlZCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+',
         verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
         scale: 0.5,
       },
       label: {
-        text: 'Pune',
+        text: 'Destination',
         font: '14pt sans-serif',
         style: Cesium.LabelStyle.FILL_AND_OUTLINE,
         outlineWidth: 2,
@@ -52,16 +51,13 @@ export default function CesiumGlobe() {
       },
     })
 
-    // Get route coordinates
-    const routeCoords = await getRouteCoordinates(mumbaiLat, mumbaiLng, puneLat, puneLng)
-    
-    if (routeCoords) {
-      // Convert route coordinates to Cartesian3 array
+    // Get route coordinates and add route line
+    const routeCoords = await getRouteCoordinates(sourceLat, sourceLng, destLat, destLng);
+    if (routeCoords && routeCoords.length > 0) {
       const positions = routeCoords.map(coord => 
         Cesium.Cartesian3.fromDegrees(coord[0], coord[1], 100)
-      )
+      );
 
-      // Add illuminated path along the route
       viewer.entities.add({
         polyline: {
           positions: positions,
@@ -71,14 +67,20 @@ export default function CesiumGlobe() {
             color: Cesium.Color.YELLOW,
           }),
         },
-      })
+      });
     }
 
-    // Set camera to view both cities
+    // Calculate bounding rectangle to view both locations
+    const west = Math.min(sourceLng, destLng) - 0.5;
+    const south = Math.min(sourceLat, destLat) - 0.5;
+    const east = Math.max(sourceLng, destLng) + 0.5;
+    const north = Math.max(sourceLat, destLat) + 0.5;
+
+    // Set camera to view both markers
     viewer.camera.flyTo({
-      destination: Cesium.Rectangle.fromDegrees(72.5, 18.0, 74.0, 19.5),
+      destination: Cesium.Rectangle.fromDegrees(west, south, east, north),
       duration: 3,
-    })
+    });
   }
 
   useEffect(() => {
@@ -167,7 +169,7 @@ export default function CesiumGlobe() {
 
         // Add pins and path after viewer initialization
         if (cesiumViewer) {
-          addPinsAndPath(cesiumViewer, Cesium)
+          addPinsAndRoute(cesiumViewer, Cesium)
         }
 
         // Store the viewer in ref
@@ -202,6 +204,12 @@ export default function CesiumGlobe() {
       }
     }
   }, [])
+
+  useEffect(() => {
+    if (viewerRef.current && !viewerRef.current.isDestroyed() && (sourceLat || destLat)) {
+      addPinsAndRoute(viewerRef.current, window.Cesium);
+    }
+  }, [sourceLat, sourceLng, destLat, destLng]);
 
   return <div ref={containerRef} id="cesiumContainer" style={{ width: "100%", height: "100vh" }}></div>
 }

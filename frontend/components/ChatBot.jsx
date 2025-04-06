@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { geocodeAddress } from "../utils/geocodingService";
 import {
   Send,
   Calendar,
@@ -16,7 +17,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { usePDF } from 'react-to-pdf';
 
-export default function ChatBot() {
+export default function ChatBot({ onCoordinatesChange }) {
   const [formMode, setFormMode] = useState(true);
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -171,6 +172,20 @@ export default function ChatBot() {
     };
 
     try {
+      // Get coordinates for source and destination
+      const sourceCoords = await geocodeAddress(fromCity);
+      const destCoords = await geocodeAddress(destinationCity);
+
+      if (!sourceCoords || !destCoords) {
+        throw new Error('Could not find coordinates for one or both locations');
+      }
+
+      // Update coordinates through the prop
+      onCoordinatesChange?.({
+        source: sourceCoords,
+        destination: destCoords
+      });
+
       const response = await fetch(
         "https://3ddc-14-139-125-231.ngrok-free.app/generate-plan",
         {
