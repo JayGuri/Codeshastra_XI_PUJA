@@ -1,15 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Logo from "./Logo"
-import { Menu, X } from "lucide-react"
-
-export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-=======
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
@@ -18,23 +8,11 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
->>>>>>> origin
 
   // Add scroll effect
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
-<<<<<<< HEAD
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-=======
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -44,7 +22,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
->>>>>>> origin
 
   return (
     <nav
@@ -67,10 +44,7 @@ export default function Navbar() {
               { name: "Home", href: "/" },
               { name: "Community", href: "/community" },
               { name: "About Us", href: "/about" },
-<<<<<<< HEAD
-=======
               { name: "Scrapbook", href: "/scrapbook" },
->>>>>>> origin
             ].map((item) => (
               <Link
                 key={item.name}
@@ -85,13 +59,8 @@ export default function Navbar() {
 
           {/* Right section - could add buttons/CTAs here */}
           <div className="hidden md:flex items-center ml-auto">
-<<<<<<< HEAD
-            <Link 
-              href="/login" 
-=======
             <Link
               href="/login"
->>>>>>> origin
               className="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Login
@@ -124,23 +93,15 @@ export default function Navbar() {
               { name: "Home", href: "/" },
               { name: "Community", href: "/community" },
               { name: "About Us", href: "/about" },
-<<<<<<< HEAD
-=======
               { name: "Scrapbook", href: "/scrapbook" },
->>>>>>> origin
               { name: "Login", href: "/login" },
             ].map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`${
-<<<<<<< HEAD
-                  item.name === "Login" 
-                    ? "text-white bg-indigo-600 hover:bg-indigo-700" 
-=======
                   item.name === "Login"
                     ? "text-white bg-indigo-600 hover:bg-indigo-700"
->>>>>>> origin
                     : "text-gray-300 hover:text-white"
                 } block px-3 py-2 rounded-md text-base font-medium transition-all`}
                 onClick={() => setIsMenuOpen(false)}
@@ -152,10 +113,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 }
->>>>>>> origin

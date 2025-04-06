@@ -1,182 +1,205 @@
 ```markdown
-# Dubai Family Travel Itinerary (June 4, 2025 - November 4, 2025)
+# Goa Family Travel Itinerary: November 25, 2025 - December 4, 2025 (10 Days for Family of 10)
 
-## Tailored for: A Family of 10
+This itinerary focuses on the optimal travel period (late November - early December) for pleasant weather and incorporates family-friendly activities and attractions. It also considers the logistics of traveling with a larger group.
 
-This itinerary provides a comprehensive plan for a family of 10 visiting Dubai between June 4, 2025, and November 4, 2025. It includes visa information, family-friendly attractions, accommodation recommendations, local events, cost considerations, daily schedules and travel tips.
+## Pre-Trip Planning:
 
-## 1. Visa Requirements for Indian Citizens
+*   **Flights:** Book round-trip flights from Mumbai to Dabolim Airport (GOI) well in advance. (Estimated cost: INR 30,000 - INR 60,000 per person).
+*   **Accommodation:** Reserve a large villa or multiple suites at a family-friendly resort (e.g., The Leela Goa, Taj Exotica, Park Hyatt) for the entire duration. (Estimated cost: INR 20,000 - INR 50,000 per night).
+*   **Transportation:** Arrange for airport transfers and local transportation (hire a van or multiple taxis).
+*   **Activities:** Pre-book popular tours and activities, especially for a group of 10.
+*   **Essentials:** Pack light cotton clothes, swimwear, sunscreen, hats, sunglasses, insect repellent, and any necessary medications.
+*   **Currency:** Exchange currency to Indian Rupees (INR).
 
-*   **General Information:** Indian citizens generally require a pre-arranged visa for Dubai. Visa on arrival is *generally* not available, except for those with a valid US visa or Green Card (14-day visa on arrival eligibility). It's crucial to apply well in advance to avoid any potential issues.
-*   **Types:** Tourist visas (30 or 60 days, single/multiple entry) are most appropriate for a leisure trip.
-*   **Application Process:** Apply online through the official website of the UAE embassy or through authorized travel agencies.
-*   **Required Documents:**
-    *   Passport: Valid Indian passport with at least six months of validity from the date of entry.
-    *   Application Form: Duly filled and signed visa application form.
-    *   Photographs: Passport-sized photographs with a white background.
-    *   Return Ticket: Confirmed return flight ticket.
-    *   Accommodation Proof: Hotel booking confirmation or other proof of accommodation.
-    *   Travel Insurance: Recommended, though not always mandatory.
-*   **2025 Considerations:** Stay updated on any changes to visa rules and guidelines for Indian citizens by checking official government sources closer to the travel dates.
+## Daily Itinerary:
 
-## 2. Accommodation for a Family of 10
+**Day 1: Arrival in Goa & Beach Relaxation (November 25, 2025)**
 
-*   **Apartment Hotels/Serviced Residences:** Ideal for larger families, offering multiple bedrooms, kitchen facilities, and common areas. Examples include:
-    *   **Adagio Premium The Palm:** Offers spacious apartments with great views.
-        *   *Estimated Cost: AED 800 - AED 1500 per night for a large apartment*
-    *   **Roda Amwaj Suites, Jumeirah Beach Residence (JBR):** Well-located with easy access to the beach and restaurants.
-        *   *Estimated Cost: AED 700 - AED 1400 per night for a large suite*
-    *   **DAMAC Maison Hotels & Resorts:** Several locations with large apartments.
-        *   *Estimated Cost: AED 600 - AED 1200 per night depending on location and size*
-*   **Connecting Rooms in Hotels:** Some hotels offer connecting rooms, providing more space and privacy.
-    *   **Atlantis, The Palm:** Offers connecting rooms and family suites.
-        *   *Estimated Cost: AED 2500 - AED 5000+ per night for connecting rooms or a suite*
-    *   **Jumeirah Beach Hotel:** Family-friendly with great facilities.
-        *   *Estimated Cost: AED 2000 - AED 4000+ per night for connecting rooms or a suite*
-*   **Villas:** Consider renting a villa with a private pool for a more exclusive experience. Check Airbnb Luxe or VRBO for options.
-    *   *Estimated Cost: AED 1500 - AED 5000+ per night depending on size, location, and amenities*
-*   **Considerations:**
-    *   **Location:** Choose a location convenient to attractions, transportation, and restaurants (e.g., Dubai Marina, JBR, Downtown Dubai, The Palm Jumeirah).
-    *   **Amenities:** Look for accommodations with pools, kids' clubs, and other family-friendly amenities.
-    *   **Budget:** Apartment hotels and serviced residences are often more cost-effective for larger families than multiple hotel rooms.
+*   **Morning (8:00 AM - 12:00 PM):**
+    *   8:00 AM: Depart from Mumbai to Goa by flight (GOI).
+    *   9:00 AM: Arrive at Dabolim Airport (GOI).
+    *   9:30 AM: Transfer to the pre-booked Villa/Resort in North Goa (Calangute/Candolim area).
+    *   10:30 AM: Check-in and freshen up.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a family-friendly restaurant near the resort (INR 3,000 - INR 5,000).
+    *   2:00 PM: Relax and unwind at Calangute Beach. Kids can build sandcastles, swim, and play beach games.
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   6:00 PM: Enjoy sunset views at the beach.
+    *   7:30 PM: Dinner at a beach shack with kid-friendly options (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-## 3. Family-Friendly Attractions in Dubai
+    *Daily Travel Plan:* Flight from Mumbai to Goa, followed by taxi to resort.
+    *Daily Spending:* Flights (variable), Airport Transfer (INR 2,000), Lunch (INR 4,000), Dinner (INR 5,500), Accommodation (INR 20,000-50,000)
+    *Tips:* Book flights and accomodation in advance
 
-Dubai offers many attractions suitable for families of all ages.
+**Day 2: North Goa Exploration (November 26, 2025)**
 
-*   **Iconic Landmarks & Experiences:**
-    *   **Burj Khalifa:** Book tickets well in advance, especially for a large family. Consider the "At the Top" experience for enhanced views.
-        *   *Estimated Cost: AED 150-400 per person*
-    *   **The Dubai Mall:** More than just shopping. Include the Dubai Aquarium & Underwater Zoo, KidZania (interactive city for children), and the ice rink. Allocate ample time.
-        *   *Dubai Aquarium: AED 100-150 per person, KidZania: AED 150-250 per child, Ice Rink: AED 80-120 per person*
-    *   **The Dubai Fountain:** Free and captivating show for all ages. Best viewed in the evening.
-        *   *Cost: Free*
-*   **Theme & Water Parks:**
-    *   **IMG Worlds of Adventure:** World's largest indoor theme park, good for escaping the summer heat. Has Marvel and Cartoon Network zones suitable for different age groups.
-        *   *Estimated Cost: AED 300-400 per person*
-    *   **Aquaventure Waterpark (Atlantis The Palm):** One of the largest waterparks. Offers a variety of rides, including areas for younger children. Consider a full-day experience.
-        *   *Estimated Cost: AED 300-400 per person*
-    *   **Wild Wadi Waterpark:** Another great waterpark option.
-        *   *Estimated Cost: AED 200-300 per person*
-*   **Cultural & Educational Experiences:**
-    *   **Dubai Miracle Garden:** (Open seasonally, check dates - usually November to April). A visually stunning flower display, especially appealing to all ages.
-        *   *Estimated Cost: AED 75 per adult, AED 60 per child*
-    *   **Al Fahidi Historical Neighbourhood (Bastakiya):** Explore Dubai's history and culture. Consider a guided tour to enhance the experience.
-        *   *Cost: Free (Guided tours may have a fee)*
-    *   **Jumeirah Mosque:** Guided tours are available for non-Muslims. A good option for understanding Islamic culture.
-        *   *Estimated Cost: AED 25 per person*
-*   **Desert Adventures:**
-    *   **Desert Safari:** Choose a family-friendly tour operator with options for all ages. Include dune bashing (if appropriate), camel rides, traditional entertainment, and a buffet dinner. Ensure safety standards. Consider an evening tour to avoid the worst of the heat.
-        *   *Estimated Cost: AED 150-300 per person*
-*   **Other Activities:**
-    *   **Dubai Frame:** Panoramic views of old and new Dubai.
-        *   *Estimated Cost: AED 50 per person*
-    *   **Global Village:** (Seasonal, check dates - usually October to April). Cultural and entertainment destination. Good for experiencing different cultures and cuisines.
-        *   *Estimated Cost: AED 25 per person (entry fee)*
-    *   **Museum of the Future:** Book well in advance. Offers engaging exhibits for older children and adults interested in technology and innovation.
-        *   *Estimated Cost: AED 145 per person*
-    *   **Dubai Marina:** Take a boat tour or dhow cruise for a relaxing family experience.
-        *   *Estimated Cost: AED 100-200 per person*
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Visit Fort Aguada, offering panoramic views of the Arabian Sea.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a restaurant near Fort Aguada (INR 3,000 - INR 5,000).
+    *   2:00 PM: Explore Chapora Fort, famous for its scenic views (Dil Chahta Hai Fort).
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   6:00 PM: Enjoy the sunset at Vagator Beach near Chapora Fort.
+    *   7:30 PM: Dinner at a restaurant in Anjuna (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-## 4. Local Events (June 2025 - November 2025)
+    *Daily Travel Plan:* Taxi from resort to Fort Aguada, then to Chapora Fort, and back to resort.
+    *Daily Spending:* Breakfast (Included), Taxi (INR 3,000), Lunch (INR 4,000), Dinner (INR 5,500), Fort Entrance (Free)
+    *Tips:* Wear comfortable shoes for walking at the forts
 
-*   **Dubai Summer Surprises (DSS):** Expect sales, entertainment, and family activities during the summer months (typically July-August).
-*   **Eid Al Adha:** Islamic holiday. Dates subject to the lunar calendar. Expect cultural celebrations.
-*   **Dubai Home Festival:** Check dates for home decor and design events.
-*   **Dubai Design Week:** For design enthusiasts (late October/early November).
-*   **Diwali Celebrations:** Dubai celebrates Diwali with cultural events, appealing to the city's large Indian population.
-*   **Check Visit Dubai and Time Out Dubai websites closer to the dates for updated event listings.**
+**Day 3: Anjuna Flea Market & Beach Fun (November 27, 2025 - Wednesday)**
 
-## 5. Sample Daily Itinerary & Expenses (November - Ideal Weather)
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Visit Anjuna Flea Market (Wednesday Market). Shop for souvenirs, handicrafts, and clothing.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   1:00 PM: Lunch at a cafe near Anjuna Beach (INR 3,000 - INR 5,000).
+    *   2:30 PM: Relax and enjoy water sports at Anjuna Beach (banana boat rides, jet skiing for older kids/adults) (INR 800 - INR 2,000 per activity per person).
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   6:30 PM: Enjoy the sunset at Anjuna Beach.
+    *   7:30 PM: Dinner at a restaurant in Anjuna (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-Here's a sample itinerary assuming travel in November, when the weather is more pleasant. This can be adapted based on the family's interests and energy levels.
+    *Daily Travel Plan:* Taxi from resort to Anjuna Flea Market and Beach, then back to resort.
+    *Daily Spending:* Breakfast (Included), Taxi (INR 2,500), Lunch (INR 4,000), Water Sports (INR 8,000 - INR 20,000), Dinner (INR 5,500)
+    *Tips:* Bargain hard at the flea market, supervise children closely
 
-**Day 1: Arrival & Dubai Marina Exploration**
+**Day 4: Dudhsagar Falls Adventure (November 28, 2025)**
 
-*   **Time:** Morning
-    *   **Activity:** Arrive at Dubai International Airport (DXB), transfer to accommodation (pre-booked taxi or private transfer for a large group).
-    *   **Expenses:** Taxi/Transfer: AED 200-300
-*   **Time:** Afternoon
-    *   **Activity:** Check in, relax, and have lunch at a restaurant in Dubai Marina.
-    *   **Expenses:** Lunch: AED 50-100 per person (AED 500-1000 for the family)
-*   **Time:** Evening
-    *   **Activity:** Dubai Marina Walk - stroll along the promenade, enjoy the views, and have dinner. Consider a dhow cruise.
-    *   **Expenses:** Dinner: AED 75-150 per person (AED 750-1500 for the family), Dhow Cruise (optional): AED 150-250 per person
-*   **Daily Total Estimated Expenses:** AED 1050 - 2800 (excluding accommodation)
+*   **Morning (7:00 AM - 12:00 PM):**
+    *   7:00 AM: Early breakfast at the Villa/Resort.
+    *   8:00 AM: Depart for Dudhsagar Falls (requires a jeep safari from Collem).
+    *   10:00 AM: Arrive at Collem and begin the jeep safari to Dudhsagar Falls.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Enjoy the Dudhsagar Falls and swim in the natural pools.
+    *   2:00 PM: Lunch (packed lunch or available at Collem) (INR 3,000 - INR 5,000).
+    *   3:00 PM: Return jeep safari from Dudhsagar Falls to Collem.
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   5:00 PM: Depart from Collem back to the Villa/Resort.
+    *   7:30 PM: Dinner at a restaurant near the resort (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-**Day 2: Burj Khalifa & Dubai Mall**
+    *Daily Travel Plan:* Long taxi ride to Collem, Jeep Safari to Dudhsagar Falls, return taxi to resort.
+    *Daily Spending:* Breakfast (Included), Taxi (INR 5,000), Jeep Safari (INR 5,000), Park Entry (INR 500), Lunch (INR 4,000), Dinner (INR 5,500)
+    *Tips:* Wear comfortable walking shoes, carry swimwear and towels
 
-*   **Time:** Morning
-    *   **Activity:** Visit Burj Khalifa (pre-booked tickets).
-    *   **Expenses:** Burj Khalifa Tickets: AED 150-400 per person (depending on time and level)
-*   **Time:** Afternoon
-    *   **Activity:** Explore Dubai Mall - lunch, shopping, Dubai Aquarium.
-    *   **Expenses:** Lunch: AED 50-100 per person, Dubai Aquarium: AED 100-150 per person, Shopping: Variable
-*   **Time:** Evening
-    *   **Activity:** Dubai Fountain show (free), dinner at Dubai Mall.
-    *   **Expenses:** Dinner: AED 75-150 per person
-*   **Daily Total Estimated Expenses:** AED 975 - 3150 + Shopping (excluding accommodation)
+**Day 5: Old Goa & Spice Plantation (November 29, 2025)**
 
-**Day 3: Desert Safari**
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Visit Basilica of Bom Jesus (Old Goa), a UNESCO World Heritage Site.
+    *   11:00 AM: Explore Se Cathedral, one of the largest churches in Asia.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a restaurant near Old Goa (INR 3,000 - INR 5,000).
+    *   2:00 PM: Visit a Spice Plantation (e.g., Sahakari Spice Farm). Enjoy a guided tour and learn about local spices.
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   6:00 PM: Enjoy a traditional Goan meal at the Spice Plantation.
+    *   7:30 PM: Depart from the Spice Plantation back to the Villa/Resort.
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-*   **Time:** Afternoon
-    *   **Activity:** Desert Safari (afternoon/evening tour). Includes dune bashing, camel riding, dinner, and entertainment.
-    *   **Expenses:** Desert Safari: AED 150-300 per person
-*   **Time:** Evening
-    *   **Activity:** Enjoy the desert activities and dinner.
-*   **Daily Total Estimated Expenses:** AED 1500 - 3000 (excluding accommodation)
+    *Daily Travel Plan:* Taxi to Old Goa, then to Spice Plantation, and back to resort.
+    *Daily Spending:* Breakfast (Included), Taxi (INR 4,000), Lunch (INR 4,000), Spice Plantation Tour & Meal (INR 7,000), Dinner (Included at Spice Plantation)
+    *Tips:* Learn about local spices, enjoy Goan meal
 
-**Day 4: Waterpark Fun**
+**Day 6: Relaxing Day & Water Sports (November 30, 2025)**
 
-*   **Time:** Morning/Afternoon
-    *   **Activity:** Aquaventure Waterpark (Atlantis The Palm) or Wild Wadi Waterpark.
-    *   **Expenses:** Waterpark Tickets: AED 200-400 per person
-*   **Time:** Evening
-    *   **Activity:** Relax, have dinner at the hotel or a nearby restaurant.
-    *   **Expenses:** Dinner: AED 75-150 per person
-*   **Daily Total Estimated Expenses:** AED 950 - 2500 (excluding accommodation)
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Relax by the pool or beach.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a restaurant near the resort (INR 3,000 - INR 5,000).
+    *   2:00 PM: Water sports at Calangute/Baga Beach (banana boat rides, parasailing, jet skiing).
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   6:00 PM: Enjoy the sunset at the beach.
+    *   7:30 PM: Dinner at a beach shack (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-**Day 5: Cultural Exploration & Departure**
+    *Daily Travel Plan:* Relax at resort and nearby beach
+    *Daily Spending:* Breakfast (Included), Lunch (INR 4,000), Water Sports (INR 8,000 - INR 20,000), Dinner (INR 5,500)
+    *Tips:* Wear comfortable swimwear
 
-*   **Time:** Morning
-    *   **Activity:** Visit Al Fahidi Historical Neighbourhood (Bastakiya), Jumeirah Mosque.
-    *   **Expenses:** Jumeirah Mosque Entry: AED 25 per person, Lunch: AED 50-100 per person
-*   **Time:** Afternoon
-    *   **Activity:** Last-minute souvenir shopping, relax.
-*   **Time:** Evening
-    *   **Activity:** Transfer to Dubai International Airport (DXB) for departure.
-    *   **Expenses:** Taxi/Transfer: AED 200-300
-*   **Daily Total Estimated Expenses:** AED 475 - 1300 (excluding accommodation)
+**Day 7: South Goa Exploration (December 1, 2025)**
 
-## 6. Cost of Living and Budgeting (For the entire trip - customizable)
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Visit Agonda Beach, a tranquil and scenic beach ideal for relaxation.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a restaurant near Agonda Beach (INR 3,000 - INR 5,000).
+    *   2:00 PM: Visit Palolem Beach.
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   6:00 PM: Enjoy sunset views at Palolem Beach.
+    *   7:30 PM: Dinner at a restaurant in Palolem (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-*   **Accommodation (5 nights):** AED 3000 - AED 25000 (depending on choice)
-*   **Food (5 days):** AED 5000 - AED 15000
-*   **Activities (variable):** AED 7000 - AED 20000+
-*   **Transportation:** AED 1000 - AED 3000
-*   **Miscellaneous:** AED 1000 - AED 3000 (souvenirs, snacks, etc.)
-*   **Total Estimated Cost:** AED 17000 - AED 66000+ (This is a broad range, adjust based on your preferences)
+    *Daily Travel Plan:* Taxi to Agonda and Palolem Beach
+    *Daily Spending:* Breakfast (Included), Taxi (INR 5,000), Lunch (INR 4,000), Dinner (INR 5,500)
+    *Tips:* Explore South Goa
 
-## 7. Important Notes
+**Day 8: Chorao Island (Salim Ali Bird Sanctuary) (December 2, 2025)**
 
-*   **Currency:** United Arab Emirates Dirham (AED).
-*   **Language:** Arabic (official), but English is widely spoken.
-*   **Transportation:** Metro, buses, taxis, ride-sharing (Uber, Careem). Consider purchasing a Nol card for public transport if using frequently.
-*   **Dress Code:** Dress respectfully, especially at religious sites. Shoulders and knees should be covered.
-*   **Weather:**
-    *   **June - September:** Very hot and humid. Focus on indoor activities.
-    *   **October - November:** More pleasant weather.
-*   **Bookings:** Book flights, accommodation, and tours in advance, especially during peak season.
-*   **Health and Safety:** Travel insurance is recommended. Stay hydrated, especially during the hotter months.
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Visit Chorao Island (Salim Ali Bird Sanctuary). Take a ferry to the island.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a restaurant on Chorao Island (INR 3,000 - INR 5,000).
+    *   2:00 PM: Explore the Salim Ali Bird Sanctuary (hire a guide for a more informative experience).
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   5:00 PM: Take a ferry back from Chorao Island.
+    *   6:00 PM: Dinner at a restaurant near the resort (INR 4,000 - INR 7,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
 
-## 8. Tips for Saving Money
+   *Daily Travel Plan:* Taxi to ferry, ferry to Chorao Island and Bird Sanctuary
+    *Daily Spending:* Breakfast (Included), Taxi (INR 3,000), Ferry (INR 200), Bird Sanctuary Entry (INR 500), Guide (INR 1,500), Lunch (INR 4,000), Dinner (INR 5,500)
+    *Tips:* Hire guide for Bird Sanctuary
 
-*   Travel during the shoulder season (October/November) for more pleasant weather and potentially lower prices.
-*   Take advantage of free activities (Dubai Fountain, beaches, exploring historical neighborhoods).
-*   Cook some meals in your apartment or serviced residence.
-*   Look for discounts and deals online and through travel agencies.
-*   Use public transportation when possible.
-*   Consider purchasing a multi-attraction pass if you plan to visit many paid attractions.
+**Day 9: Free Day & Shopping (December 3, 2025)**
 
-Enjoy your family trip to Dubai!
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Relax by the pool or beach.
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   12:30 PM: Lunch at a restaurant near the resort (INR 3,000 - INR 5,000).
+    *   2:00 PM: Shopping for souvenirs and gifts at local markets (Mapusa Market).
+*   **Evening (5:00 PM - 10:00 PM):**
+    *   7:30 PM: Farewell dinner at a nice restaurant in Goa (INR 6,000 - INR 10,000).
+    *   9:00 PM: Return to the Villa/Resort for the night.
+
+    *Daily Travel Plan:* Relax by the beach or pool, visit local market
+    *Daily Spending:* Breakfast (Included), Lunch (INR 4,000), Shopping (INR 5,000), Farewell Dinner (INR 8,000)
+    *Tips:* Relax
+
+**Day 10: Departure (December 4, 2025)**
+
+*   **Morning (9:00 AM - 12:00 PM):**
+    *   9:00 AM: Breakfast at the Villa/Resort.
+    *   10:00 AM: Check out from the Villa/Resort.
+    *   11:00 AM: Transfer to Dabolim Airport (GOI).
+*   **Afternoon (12:00 PM - 5:00 PM):**
+    *   1:00 PM: Depart from Goa to Mumbai by flight.
+
+    *Daily Travel Plan:* Transfer to Airport
+    *Daily Spending:* Breakfast (Included), Airport Transfer (INR 2,000), Flights (variable)
+    *Tips:* Pack and check out properly
+
+## Estimated Total Costs (for Family of 10):
+
+*   **Flights (Mumbai-Goa-Mumbai):** INR 300,000 - INR 600,000
+*   **Accommodation (9 nights):** INR 180,000 - INR 450,000
+*   **Food (10 days):** INR 40,000 - INR 70,000
+*   **Transportation (Local):** INR 30,000 - INR 50,000
+*   **Activities & Entrance Fees:** INR 20,000 - INR 40,000
+*   **Miscellaneous:** INR 20,000 - INR 40,000
+
+**Total Estimated Trip Cost:** INR 590,000 - INR 1,250,000
+
+## Additional Tips:
+
+*   **Health & Safety:** Consult a doctor about necessary vaccinations and medications. Carry a basic first-aid kit. Be aware of your surroundings, especially at night.
+*   **Communication:** Purchase a local SIM card for easy communication.
+*   **Bargaining:** Bargain at flea markets and with taxi drivers.
+*   **Flexibility:** Be prepared to adjust the itinerary based on weather conditions and family preferences.
+
 ```
