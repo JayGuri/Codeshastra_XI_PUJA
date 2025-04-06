@@ -93,7 +93,7 @@ export default function About() {
               </div>
               <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
               <p className="text-xl text-gray-300 leading-relaxed">
-                At TravelSage, we believe that travel should be transformative, not tedious. Our mission is to harness
+                At PUJATravels, we believe that travel should be transformative, not tedious. Our mission is to harness
                 the power of artificial intelligence to create personalized travel experiences that match your unique
                 preferences, budget, and interests. We're dedicated to removing the stress from travel planning so you
                 can focus on what matters most – creating unforgettable memories.
@@ -262,7 +262,7 @@ export default function About() {
         >
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">How TravelSage Works</h2>
+              <h2 className="text-4xl font-bold mb-4">How PUJATravels Works</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Planning your perfect trip is as easy as 1-2-3</p>
             </div>
 
@@ -312,7 +312,7 @@ export default function About() {
         <div id="team" className={`py-20 animate-section ${isVisible.team ? "animate-fade-in" : "opacity-0"}`}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">The Minds Behind TravelSage</h2>
+              <h2 className="text-4xl font-bold mb-4">The Minds Behind PUJATravels</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We're a diverse team of travel enthusiasts, AI experts, and industry veterans united by our passion for
                 transforming the travel experience.
@@ -375,7 +375,7 @@ export default function About() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Travel Experience?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join thousands of travelers who have discovered the power of AI-driven travel planning with TravelSage.
+              Join thousands of travelers who have discovered the power of AI-driven travel planning with PUJATravels.
             </p>
             <Link
               href="/"
