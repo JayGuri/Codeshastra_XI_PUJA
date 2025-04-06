@@ -17,6 +17,32 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { usePDF } from 'react-to-pdf';
 
+// Add this new component for loading messages
+const LoadingMessages = () => {
+  const messages = [
+    "Your trip is being planned...",
+    "Budget is being allocated...",
+    "Finding the best deals...",
+    "Finalizing your itinerary..."
+  ];
+  const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
+    }, 15000); // Change message every 15 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex items-center space-x-2">
+      <div className="w-5 h-5 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
+      <span>{messages[currentMessageIndex]}</span>
+    </div>
+  );
+};
+
 export default function ChatBot({ onCoordinatesChange }) {
   const [formMode, setFormMode] = useState(true);
   const [messages, setMessages] = useState([]);
@@ -113,9 +139,7 @@ export default function ChatBot({ onCoordinatesChange }) {
           type: "bot",
           content: (
             <div className="prose max-w-none relative">
-              <div className="absolute top-2 right-2">
-                <DownloadButton content={markdownContent} />
-              </div>
+              
               <CustomMarkdown>{markdownContent}</CustomMarkdown>
             </div>
           ),
@@ -345,63 +369,7 @@ export default function ChatBot({ onCoordinatesChange }) {
   };
 
   // Update the DownloadButton component
-  const DownloadButton = ({ content }) => {
-    const { toPDF, targetRef, loading } = usePDF({
-      filename: 'travel-itinerary.pdf',
-      page: { margin: 20 }
-    });
   
-    const handleDownload = async () => {
-      try {
-        await toPDF();
-      } catch (error) {
-        console.error('Failed to generate PDF:', error);
-        // Show error message to user
-      }
-    };
-  
-    return (
-      <>
-        <div style={{ display: 'none' }}>
-          <div ref={targetRef} style={{
-            padding: '2rem',
-            backgroundColor: '#ffffff',
-            color: '#000000',
-            maxWidth: '800px',
-            margin: '0 auto'
-          }}>
-            <div style={{
-              fontFamily: 'system-ui, -apple-system, sans-serif',
-              lineHeight: '1.5'
-            }}>
-              <CustomMarkdown>{content}</CustomMarkdown>
-            </div>
-          </div>
-        </div>
-        <button
-          onClick={handleDownload}
-          className="flex items-center px-3 py-1.5 mb-2 text-xs bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors shadow-sm"
-          aria-label="Download itinerary as PDF"
-          disabled={loading}
-        >
-          <svg
-            className="w-4 h-4 mr-1.5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-            />
-          </svg>
-          {loading ? 'Generating...' : 'Download PDF'}
-        </button>
-      </>
-    );
-  };
   return (
     <motion.div
     ref={chatbotRef}
@@ -554,11 +522,13 @@ export default function ChatBot({ onCoordinatesChange }) {
             className="w-full bg-black   text-white font-medium py-3 px-4 hover:bg-transparent hover:text-black hover:border-1 hover:border-black rounded-full transition-colors duration-300 flex items-center justify-center shadow-lg"
           >
             {isLoading ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+              <LoadingMessages />
             ) : (
-              <Compass className="w-5 h-5 mr-2" />
+              <>
+                <Compass className="w-5 h-5 mr-2" />
+                Create Itinerary
+              </>
             )}
-            {isLoading ? "Creating..." : "Create Itinerary"}
           </button>
         </form>
       </div>
