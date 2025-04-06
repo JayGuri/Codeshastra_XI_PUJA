@@ -1,10 +1,85 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { getRouteCoordinates } from "../utils/routingService"
 
 export default function CesiumGlobe() {
   const containerRef = useRef(null)
   const viewerRef = useRef(null)
+
+  const addPinsAndPath = async (viewer, Cesium) => {
+    const mumbaiLat = 19.0760
+    const mumbaiLng = 72.8777
+    const puneLat = 18.5204
+    const puneLng = 73.8567
+
+    const mumbaiPosition = Cesium.Cartesian3.fromDegrees(mumbaiLng, mumbaiLat, 100)
+    const punePosition = Cesium.Cartesian3.fromDegrees(puneLng, puneLat, 100)
+
+    // Add Mumbai pin
+    viewer.entities.add({
+      position: mumbaiPosition,
+      billboard: {
+        image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InJlZCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+',
+        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+        scale: 0.5,
+      },
+      label: {
+        text: 'Mumbai',
+        font: '14pt sans-serif',
+        style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+        outlineWidth: 2,
+        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+        pixelOffset: new Cesium.Cartesian2(0, -10),
+      },
+    })
+
+    // Add Pune pin
+    viewer.entities.add({
+      position: punePosition,
+      billboard: {
+        image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InJlZCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+',
+        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+        scale: 0.5,
+      },
+      label: {
+        text: 'Pune',
+        font: '14pt sans-serif',
+        style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+        outlineWidth: 2,
+        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+        pixelOffset: new Cesium.Cartesian2(0, -10),
+      },
+    })
+
+    // Get route coordinates
+    const routeCoords = await getRouteCoordinates(mumbaiLat, mumbaiLng, puneLat, puneLng)
+    
+    if (routeCoords) {
+      // Convert route coordinates to Cartesian3 array
+      const positions = routeCoords.map(coord => 
+        Cesium.Cartesian3.fromDegrees(coord[0], coord[1], 100)
+      )
+
+      // Add illuminated path along the route
+      viewer.entities.add({
+        polyline: {
+          positions: positions,
+          width: 5,
+          material: new Cesium.PolylineGlowMaterialProperty({
+            glowPower: 0.2,
+            color: Cesium.Color.YELLOW,
+          }),
+        },
+      })
+    }
+
+    // Set camera to view both cities
+    viewer.camera.flyTo({
+      destination: Cesium.Rectangle.fromDegrees(72.5, 18.0, 74.0, 19.5),
+      duration: 3,
+    })
+  }
 
   useEffect(() => {
     // Make sure we're in the browser
@@ -90,6 +165,11 @@ export default function CesiumGlobe() {
         cesiumViewer.scene.screenSpaceCameraController.enableTilt = true
         cesiumViewer.scene.screenSpaceCameraController.enableLook = true
 
+        // Add pins and path after viewer initialization
+        if (cesiumViewer) {
+          addPinsAndPath(cesiumViewer, Cesium)
+        }
+
         // Store the viewer in ref
         viewerRef.current = cesiumViewer
 
@@ -125,4 +205,3 @@ export default function CesiumGlobe() {
 
   return <div ref={containerRef} id="cesiumContainer" style={{ width: "100%", height: "100vh" }}></div>
 }
-
