@@ -1,5 +1,6 @@
 # PUJA Travels - Intelligent Travel Planner
 
+Demo Video : https://drive.google.com/file/d/1cHbQ5BNTHH79U0i1G24Vf8SRIUbPPVHX/view
 
 PUJA Travels is an innovative travel planning platform that combines immersive 3D visualization with AI-powered itinerary generation. Plan your perfect journey with our interactive globe interface and intelligent chatbot assistant.
 
